@@ -1,0 +1,1178 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09D9097831C9FEA183EF7A817447BB53 /* PNScatterChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF8DEDC9BD2C6B02E1080581B7F9AA /* PNScatterChartData.m */; };
+		0B63CB2121F7B6719EE5832DE968692C /* PNBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 348284C01AF53EE0A62BF14CC201AD23 /* PNBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B892692A603D8BCC8A8F01DDD275C8B /* PNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CBE7118F1E313DE36EB4A39EA16FAD /* PNScatterChart.m */; };
+		1577F10389CE25DBE59F9AE0FA20E2B3 /* PNRadarChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F371340305202BA7E999E2A07C17208 /* PNRadarChartDataItem.m */; };
+		1656E4B979886F4721143BD5FBF009BA /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8219FA31679152D170B2C5C375D4F7D6 /* BEMLine.m */; };
+		19F3648D441EE853C411C511B4B1F852 /* Pods-AirTechUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C30C06782B41951797466925238324 /* Pods-AirTechUITests-dummy.m */; };
+		1C521EF038034F574FEBD781EEAE4507 /* Pods-AirTech-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C75C5620951F83474D5FA53FDD2154 /* Pods-AirTech-dummy.m */; };
+		2364D0E292CF46BDB7F244E0F3B49D80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		259873C119763E9F4C92F216A825F2A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		25AB89F3A44780A3B663C620EB98B58A /* PNChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 3530546B88C814B3FEAB416706964EA4 /* PNChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44BEDBB67467AC59936D95E028317B51 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7586E73A810A19A18DB28867BA8A6802 /* PNColor.m */; };
+		4850AF5F4CA6F0AF6D019E81C8736EB2 /* BEMLine.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DE4D8366319ED1C6D13C3A3D6C0ED3 /* BEMLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A86BE0174028E1B00350960B760AF47 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A7037B666EBBD3B057538B823F955 /* PNChartLabel.m */; };
+		4E723CDC3A28C236857F43B7BEDDE104 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03543B7E2BDDDA08CAB193B1541D3D61 /* UICountingLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		50EFB16DE6D200EF38BDB0CE5BB93932 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
+		5449C7A9E6C4A0BAF7F8953C38AFB375 /* BEMPermanentPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E8622493D633DF2D1B28B47EC7D8BB /* BEMPermanentPopupView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55A68BEC6EE7918014C13E93A9712BA9 /* PNColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B2DAA3CE7632B716D4097B1BC08AF4 /* PNColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		575081A3B88FCC47681A8677B76CC0A8 /* PNScatterChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1467BEFF82679C0DFD5C27DCF9B110 /* PNScatterChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		615DEF6EC11FC2A1FD402B4D2A024769 /* PNGenericChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E21D4A3E2C16AA02F80938B80FA5B34 /* PNGenericChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		624A60476E1BB9046DB006F6CD501753 /* PNPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6645FA9C1A4046A8C1C30F02EBDD31A9 /* PNPieChartDataItem.m */; };
+		63AB11A5E4106F71E026FDD3AE5C0819 /* PNLineChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C48AF194ADC167410BD4EE3B3746C4E9 /* PNLineChartDataItem.m */; };
+		6857E6849C1FFA1607FC74148029092F /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 259A67AEF469BACEBCB76134C3220078 /* PNBar.m */; };
+		6B46ACEE4DD1DCDE7EC53A046D9C644F /* PNScatterChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB57AADE824CBE90451ADE75A34A1C97 /* PNScatterChartDataItem.m */; };
+		6E59A19C433EF4F8C8A7673CF0DC2DC9 /* PNScatterChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5EFC29BD7C516F78630C2D01DFF967 /* PNScatterChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD810FC9EB0917CF0EE40E7D0130BEB /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = AF27AEA8A7F36C07D756214C8FC88398 /* PNLineChart.m */; };
+		75597738D77785C9C4A5AA4AA7178C0C /* PNLineChart.h in Headers */ = {isa = PBXBuildFile; fileRef = D757C9435E5E489FF565874DB5C8A224 /* PNLineChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78FD2524ABC34FFC92B4A84EF78756D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		7F447315B80545D0C01225EEF849291F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		7FD5D44ADD57BF55545D50A9C3E2C9B3 /* PNLineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE367F99F03C17ED9272364FC3D47575 /* PNLineChartData.m */; };
+		867815EEDD60DBF7C1A91DCA2C452653 /* BEMSimpleLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7297BCF0F88E2E5A7F33E4C6C0B4DAE5 /* BEMSimpleLineGraphView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD655E8EB652D0DFB5CA982B1202622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		903C647F682329752FC0DDCB72FFE45F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
+		9EC67AF93AA26F89F59B6E06B3549D86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		A354F7D1671D9863046A969B0994A700 /* PNCircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE7E74CFA037E931A4105EECA5F3ED /* PNCircleChart.m */; };
+		A3B1F24383FEE82D140194E41BC9CE46 /* Pods-AirTechTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15089726A609FDB64745CD02D2D3EFD0 /* Pods-AirTechTests-dummy.m */; };
+		A40FD707AE7598006F7A29E56273AC92 /* PNPieChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F8E02E9DE7FA95332097C2609EAE843 /* PNPieChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9C3D307358C2999F57EE7618D819C26 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FD1742E241A31A544D5746B05BA884 /* BEMCircle.m */; };
+		AB02D77F0AB1E185B23D6F6A8C845C32 /* PNLineChartData.h in Headers */ = {isa = PBXBuildFile; fileRef = 70444C6C7A3B5C9B78A6C4C32A6058F3 /* PNLineChartData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD7A45280067E32661352A300AAAB499 /* PNRadarChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = CF424B9EA2EA7137F30BED9ADC37AD2A /* PNRadarChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3EB59B53EECE7B211D8945339AEBBC3 /* PNScatterChart.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F25E1CBCD71C1157D556194EF868CD /* PNScatterChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8D160C00EEAA55BFCA2125123F0C052 /* PNGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F40491315C2CA9699347D95DCBBBC6D0 /* PNGenericChart.m */; };
+		BA23D123DB4E8DE763BA887B508E5A3D /* PNChartLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D7DE48DCE6440D7335E325D7B435D8 /* PNChartLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF987E16E146ACC52EA930F005835981 /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42FA1857BE7FCCDC7FBE86C4079C79 /* BEMAverageLine.m */; };
+		C08D81AD3719A925A3462D346DEC1C0F /* PNChartDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3EFF957722BB64544DA82D65D3B971 /* PNChartDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4EC6A8E94207C5B17FC1E5F74178DB7 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7F19B3622D70A5FFD7EFCF77C2879 /* BEMSimpleLineGraphView.m */; };
+		CFAB562865885A2260B53B6966C6A5EA /* BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C056E33C281E56EDCA45412D2EEE9184 /* BEMSimpleLineGraph-dummy.m */; };
+		D1664321FFCA6026D6E85978A1AFE3EC /* PNRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCC5B0FE6CBB23A5B569DCAD33519F /* PNRadarChart.m */; };
+		D1795FB35475C44202A4F0EB655865E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
+		D813E5D4CDB2B46BE2D9DF09A90AC2C3 /* PNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBF8B4073AC8218FA330C09DC44BFC7 /* PNPieChart.m */; };
+		DB9E2926F467F925EF997634EA625F2B /* PNLineChartDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DC53D0B925AFBF098DFD85CDB13BB773 /* PNLineChartDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1CDB62E948DFB819A89EEB26FAEBED8 /* BEMCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A672D0F2F1DC020EBD68F9F2BB55E8 /* BEMCircle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E98DF2071427D3532C78495B9DC145A2 /* PNCircleChart.h in Headers */ = {isa = PBXBuildFile; fileRef = CE8BB08D82D3B342EBCA54AF9805DE7E /* PNCircleChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC6C9B809A9A894CAB42FABA607299EE /* PNChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14623A8C54D6162966383038ED219370 /* PNChart-dummy.m */; };
+		EDCEB6D707FF2288C67076D61DC83359 /* UICountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDDC6EC5A664654C6BBECA27E9D49 /* UICountingLabel-dummy.m */; };
+		F611AA85C69D5CCCC4EBCEEA3FCE8CA4 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 998BC8107EE462FAADAD198392AD6A15 /* PNBarChart.m */; };
+		F66E801DEECA2340292AE69D7B102006 /* PNBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EB3F7FABCA6116D042D35740AF1B35 /* PNBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7C729E1EA0EA97AB45B866C9AF21301 /* BEMAverageLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 801012DE9596156CE714E7F326DA0393 /* BEMAverageLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8CC8930BD144EA6C090EC018555BA9D /* PNPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 398577CB101C396A89C8C8AC65A3BE60 /* PNPieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D31053190166EB68C4015A91E01E2C /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DBCE08CE0CE7DA854D93B4B6A036D /* BEMPermanentPopupView.m */; };
+		FD8A7048D93A1CAC3C203F38A28D9F36 /* PNRadarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 7028773D93D08A5CC7F4CD81E1F96BD8 /* PNRadarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEEF28820A2181068AD4D6012BC9F38C /* UICountingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0887BB0E78CD7E6E0A3AE9E581311B /* UICountingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D75F7704E507AA449B7B0381B18D6AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2072D1DF5BFD9E8B5826A6936EED91A9;
+			remoteInfo = BEMSimpleLineGraph;
+		};
+		ADFC916BABD10ADE04ED16C02FF2AC84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB31A05090143EAF02A3DE187E2CBA22;
+			remoteInfo = UICountingLabel;
+		};
+		B6025D4FBDA5A17C4AD45053E430FD8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D4A1B69057B2ACDCF903EC15F099E33;
+			remoteInfo = PNChart;
+		};
+		C9E220EA5540AEFB0ECD8F05CF8153CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB31A05090143EAF02A3DE187E2CBA22;
+			remoteInfo = UICountingLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		004DB724B84754F93DC31CF7095AB40B /* PNChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PNChart-prefix.pch"; sourceTree = "<group>"; };
+		008A36B39E2C3915AB4CF7AAAED37829 /* Pods-AirTechTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTechTests-frameworks.sh"; sourceTree = "<group>"; };
+		009CDD295A39163F9BC1EFB25D9742A3 /* Pods-AirTechTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTechTests-resources.sh"; sourceTree = "<group>"; };
+		03543B7E2BDDDA08CAB193B1541D3D61 /* UICountingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		04B2DAA3CE7632B716D4097B1BC08AF4 /* PNColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNColor.h; path = PNChart/PNColor.h; sourceTree = "<group>"; };
+		05CBAACF8FFFC6E16C765645DDE56D05 /* libPods-AirTechUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTechUITests.a"; path = "libPods-AirTechUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C75C5620951F83474D5FA53FDD2154 /* Pods-AirTech-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTech-dummy.m"; sourceTree = "<group>"; };
+		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		0EE7F19B3622D70A5FFD7EFCF77C2879 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		14623A8C54D6162966383038ED219370 /* PNChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PNChart-dummy.m"; sourceTree = "<group>"; };
+		15089726A609FDB64745CD02D2D3EFD0 /* Pods-AirTechTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTechTests-dummy.m"; sourceTree = "<group>"; };
+		19EB3F7FABCA6116D042D35740AF1B35 /* PNBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNBarChart.h; path = PNChart/PNBarChart.h; sourceTree = "<group>"; };
+		1B42662D92406F73E78F0E6B45F77663 /* Pods-AirTech-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTech-resources.sh"; sourceTree = "<group>"; };
+		1DFE7E74CFA037E931A4105EECA5F3ED /* PNCircleChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNCircleChart.m; path = PNChart/PNCircleChart.m; sourceTree = "<group>"; };
+		1F42FA1857BE7FCCDC7FBE86C4079C79 /* BEMAverageLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
+		1F6BA4C6FFFE337AA743ADD0EC5D0F52 /* Pods-AirTechUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTechUITests-frameworks.sh"; sourceTree = "<group>"; };
+		217AE0FBB6CD5429AF94B595A0810EAD /* libBEMSimpleLineGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBEMSimpleLineGraph.a; path = libBEMSimpleLineGraph.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		259A67AEF469BACEBCB76134C3220078 /* PNBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNBar.m; path = PNChart/PNBar.m; sourceTree = "<group>"; };
+		307B2103B8554033F9E3936BDABD201F /* Pods-AirTech-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTech-acknowledgements.plist"; sourceTree = "<group>"; };
+		30C7DBCA1349E2971EBAAD02618B202C /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libUICountingLabel.a; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A7037B666EBBD3B057538B823F955 /* PNChartLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNChartLabel.m; path = PNChart/PNChartLabel.m; sourceTree = "<group>"; };
+		348284C01AF53EE0A62BF14CC201AD23 /* PNBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNBar.h; path = PNChart/PNBar.h; sourceTree = "<group>"; };
+		3530546B88C814B3FEAB416706964EA4 /* PNChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChart.h; path = PNChart/PNChart.h; sourceTree = "<group>"; };
+		398577CB101C396A89C8C8AC65A3BE60 /* PNPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNPieChart.h; path = PNChart/PNPieChart.h; sourceTree = "<group>"; };
+		3DCCC5B0FE6CBB23A5B569DCAD33519F /* PNRadarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNRadarChart.m; path = PNChart/PNRadarChart.m; sourceTree = "<group>"; };
+		3E21C53624C3E731E2AFE993F8EE5A00 /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
+		45D7DE48DCE6440D7335E325D7B435D8 /* PNChartLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChartLabel.h; path = PNChart/PNChartLabel.h; sourceTree = "<group>"; };
+		4BFF13A9A16EEE1321262AB88E211598 /* PNChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PNChart.xcconfig; sourceTree = "<group>"; };
+		504B603BB738EE53BA70E26E995C59F7 /* Pods-AirTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTechTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		520CB745DEA2F945FADBFC7EF97C5583 /* Pods-AirTechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTechTests.release.xcconfig"; sourceTree = "<group>"; };
+		52504F383BBCC78019CAF2AC78067398 /* Pods-AirTech-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTech-acknowledgements.markdown"; sourceTree = "<group>"; };
+		57CBE7118F1E313DE36EB4A39EA16FAD /* PNScatterChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChart.m; path = PNChart/PNScatterChart.m; sourceTree = "<group>"; };
+		5C0DBCE08CE0CE7DA854D93B4B6A036D /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		5D1467BEFF82679C0DFD5C27DCF9B110 /* PNScatterChartData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChartData.h; path = PNChart/PNScatterChartData.h; sourceTree = "<group>"; };
+		64E612D71EB5A8A507625AA9F849C53B /* libPNChart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPNChart.a; path = libPNChart.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6645FA9C1A4046A8C1C30F02EBDD31A9 /* PNPieChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNPieChartDataItem.m; path = PNChart/PNPieChartDataItem.m; sourceTree = "<group>"; };
+		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67C30C06782B41951797466925238324 /* Pods-AirTechUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirTechUITests-dummy.m"; sourceTree = "<group>"; };
+		67FD1742E241A31A544D5746B05BA884 /* BEMCircle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
+		68786634DC234FFC0577438EE4689867 /* Pods-AirTech-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTech-frameworks.sh"; sourceTree = "<group>"; };
+		6AF3187816BECFD9F18CA5A7597BAF19 /* libPods-AirTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTech.a"; path = "libPods-AirTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E21D4A3E2C16AA02F80938B80FA5B34 /* PNGenericChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNGenericChart.h; path = PNChart/PNGenericChart.h; sourceTree = "<group>"; };
+		6F371340305202BA7E999E2A07C17208 /* PNRadarChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNRadarChartDataItem.m; path = PNChart/PNRadarChartDataItem.m; sourceTree = "<group>"; };
+		7028773D93D08A5CC7F4CD81E1F96BD8 /* PNRadarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNRadarChart.h; path = PNChart/PNRadarChart.h; sourceTree = "<group>"; };
+		70444C6C7A3B5C9B78A6C4C32A6058F3 /* PNLineChartData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChartData.h; path = PNChart/PNLineChartData.h; sourceTree = "<group>"; };
+		7297BCF0F88E2E5A7F33E4C6C0B4DAE5 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		73A39120FEA076271867C643629D426F /* Pods-AirTechUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirTechUITests-resources.sh"; sourceTree = "<group>"; };
+		7586E73A810A19A18DB28867BA8A6802 /* PNColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNColor.m; path = PNChart/PNColor.m; sourceTree = "<group>"; };
+		78F540D4AFF2C6EEAF9159B6D658765E /* UICountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		794B90AE80B8AB04C72F6631AD93054C /* Pods-AirTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTech.debug.xcconfig"; sourceTree = "<group>"; };
+		79A672D0F2F1DC020EBD68F9F2BB55E8 /* BEMCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
+		7FE6A56F242C29E861723B0D42560146 /* Pods-AirTechUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTechUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		801012DE9596156CE714E7F326DA0393 /* BEMAverageLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
+		8219FA31679152D170B2C5C375D4F7D6 /* BEMLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
+		851FB860985CB94B1002F82AECB45FF1 /* Pods-AirTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTech.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		975140311E1C3E861EEB4981DECD9F63 /* BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMSimpleLineGraph.xcconfig; sourceTree = "<group>"; };
+		998BC8107EE462FAADAD198392AD6A15 /* PNBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNBarChart.m; path = PNChart/PNBarChart.m; sourceTree = "<group>"; };
+		9F5EFC29BD7C516F78630C2D01DFF967 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChartDataItem.h; path = PNChart/PNScatterChartDataItem.h; sourceTree = "<group>"; };
+		9F8E02E9DE7FA95332097C2609EAE843 /* PNPieChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNPieChartDataItem.h; path = PNChart/PNPieChartDataItem.h; sourceTree = "<group>"; };
+		A1DFDDC6EC5A664654C6BBECA27E9D49 /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
+		A3E8622493D633DF2D1B28B47EC7D8BB /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		A7F25E1CBCD71C1157D556194EF868CD /* PNScatterChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNScatterChart.h; path = PNChart/PNScatterChart.h; sourceTree = "<group>"; };
+		ABACDADD43EEC87A94875BE3F2D815EE /* Pods-AirTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF27AEA8A7F36C07D756214C8FC88398 /* PNLineChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChart.m; path = PNChart/PNLineChart.m; sourceTree = "<group>"; };
+		B1DE4D8366319ED1C6D13C3A3D6C0ED3 /* BEMLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
+		B623AD4C5AFDD64898BE57BD3AEBA58A /* Pods-AirTechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirTechUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFFAB98FF4E67B649638FA0BC72BF147 /* libPods-AirTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirTechTests.a"; path = "libPods-AirTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C056E33C281E56EDCA45412D2EEE9184 /* BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
+		C0CF26E947D7BE85E7A2226495B34BA4 /* Pods-AirTechTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirTechTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C48AF194ADC167410BD4EE3B3746C4E9 /* PNLineChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChartDataItem.m; path = PNChart/PNLineChartDataItem.m; sourceTree = "<group>"; };
+		C7A9A75DE8566BEC86B135E29BAD08C1 /* Pods-AirTechTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTechTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CE8BB08D82D3B342EBCA54AF9805DE7E /* PNCircleChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNCircleChart.h; path = PNChart/PNCircleChart.h; sourceTree = "<group>"; };
+		CEBF8B4073AC8218FA330C09DC44BFC7 /* PNPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNPieChart.m; path = PNChart/PNPieChart.m; sourceTree = "<group>"; };
+		CF424B9EA2EA7137F30BED9ADC37AD2A /* PNRadarChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNRadarChartDataItem.h; path = PNChart/PNRadarChartDataItem.h; sourceTree = "<group>"; };
+		D757C9435E5E489FF565874DB5C8A224 /* PNLineChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChart.h; path = PNChart/PNLineChart.h; sourceTree = "<group>"; };
+		DB57AADE824CBE90451ADE75A34A1C97 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChartDataItem.m; path = PNChart/PNScatterChartDataItem.m; sourceTree = "<group>"; };
+		DBBF8DEDC9BD2C6B02E1080581B7F9AA /* PNScatterChartData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNScatterChartData.m; path = PNChart/PNScatterChartData.m; sourceTree = "<group>"; };
+		DC53D0B925AFBF098DFD85CDB13BB773 /* PNLineChartDataItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLineChartDataItem.h; path = PNChart/PNLineChartDataItem.h; sourceTree = "<group>"; };
+		DE367F99F03C17ED9272364FC3D47575 /* PNLineChartData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLineChartData.m; path = PNChart/PNLineChartData.m; sourceTree = "<group>"; };
+		DE6885F598427BA31AD1271D3C71BB74 /* Pods-AirTechUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirTechUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F40491315C2CA9699347D95DCBBBC6D0 /* PNGenericChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNGenericChart.m; path = PNChart/PNGenericChart.m; sourceTree = "<group>"; };
+		F654F8C1046AC0FF1DEFAF6F5FCED755 /* BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
+		FA0887BB0E78CD7E6E0A3AE9E581311B /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		FA3EFF957722BB64544DA82D65D3B971 /* PNChartDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNChartDelegate.h; path = PNChart/PNChartDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B12A45F179F0A02BBC1D780DC85A815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F447315B80545D0C01225EEF849291F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7879D276EFD3961153E054CE10BD60AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259873C119763E9F4C92F216A825F2A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89010C3374E413433CB78B771911DDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD655E8EB652D0DFB5CA982B1202622 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91DBB11D8CEAE777C4F8906914915C5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2364D0E292CF46BDB7F244E0F3B49D80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8D154E1CEEA236B276947B6CC1BE4CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC67AF93AA26F89F59B6E06B3549D86 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A8C1F4EBC9C0AA630A008C2EE83185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1795FB35475C44202A4F0EB655865E6 /* CoreGraphics.framework in Frameworks */,
+				78FD2524ABC34FFC92B4A84EF78756D6 /* Foundation.framework in Frameworks */,
+				50EFB16DE6D200EF38BDB0CE5BB93932 /* QuartzCore.framework in Frameworks */,
+				903C647F682329752FC0DDCB72FFE45F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03012FF797F89276265D3B4D31437031 /* Pods-AirTechTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0CF26E947D7BE85E7A2226495B34BA4 /* Pods-AirTechTests-acknowledgements.markdown */,
+				C7A9A75DE8566BEC86B135E29BAD08C1 /* Pods-AirTechTests-acknowledgements.plist */,
+				15089726A609FDB64745CD02D2D3EFD0 /* Pods-AirTechTests-dummy.m */,
+				008A36B39E2C3915AB4CF7AAAED37829 /* Pods-AirTechTests-frameworks.sh */,
+				009CDD295A39163F9BC1EFB25D9742A3 /* Pods-AirTechTests-resources.sh */,
+				504B603BB738EE53BA70E26E995C59F7 /* Pods-AirTechTests.debug.xcconfig */,
+				520CB745DEA2F945FADBFC7EF97C5583 /* Pods-AirTechTests.release.xcconfig */,
+			);
+			name = "Pods-AirTechTests";
+			path = "Target Support Files/Pods-AirTechTests";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2691F93227E549B2A03FB9E6D0C3C623 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */,
+				6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */,
+				51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */,
+				EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2742F962195338A5A5170155E3337B4E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E21C53624C3E731E2AFE993F8EE5A00 /* UICountingLabel.xcconfig */,
+				A1DFDDC6EC5A664654C6BBECA27E9D49 /* UICountingLabel-dummy.m */,
+				78F540D4AFF2C6EEAF9159B6D658765E /* UICountingLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UICountingLabel";
+			sourceTree = "<group>";
+		};
+		32C1345790ED85F2A41D63B4010D0A84 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				975140311E1C3E861EEB4981DECD9F63 /* BEMSimpleLineGraph.xcconfig */,
+				C056E33C281E56EDCA45412D2EEE9184 /* BEMSimpleLineGraph-dummy.m */,
+				F654F8C1046AC0FF1DEFAF6F5FCED755 /* BEMSimpleLineGraph-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMSimpleLineGraph";
+			sourceTree = "<group>";
+		};
+		40E0C2BCFA762B29FABEB9472A9682AD /* UICountingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				FA0887BB0E78CD7E6E0A3AE9E581311B /* UICountingLabel.h */,
+				03543B7E2BDDDA08CAB193B1541D3D61 /* UICountingLabel.m */,
+				2742F962195338A5A5170155E3337B4E /* Support Files */,
+			);
+			name = UICountingLabel;
+			path = UICountingLabel;
+			sourceTree = "<group>";
+		};
+		4DF5B3E7B965CD4ED151FF6F25A1EB76 /* Pods-AirTechUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7FE6A56F242C29E861723B0D42560146 /* Pods-AirTechUITests-acknowledgements.markdown */,
+				DE6885F598427BA31AD1271D3C71BB74 /* Pods-AirTechUITests-acknowledgements.plist */,
+				67C30C06782B41951797466925238324 /* Pods-AirTechUITests-dummy.m */,
+				1F6BA4C6FFFE337AA743ADD0EC5D0F52 /* Pods-AirTechUITests-frameworks.sh */,
+				73A39120FEA076271867C643629D426F /* Pods-AirTechUITests-resources.sh */,
+				B623AD4C5AFDD64898BE57BD3AEBA58A /* Pods-AirTechUITests.debug.xcconfig */,
+				ABACDADD43EEC87A94875BE3F2D815EE /* Pods-AirTechUITests.release.xcconfig */,
+			);
+			name = "Pods-AirTechUITests";
+			path = "Target Support Files/Pods-AirTechUITests";
+			sourceTree = "<group>";
+		};
+		4E19EF18C59F2CB6AC5437260B40E79C /* Pods-AirTech */ = {
+			isa = PBXGroup;
+			children = (
+				52504F383BBCC78019CAF2AC78067398 /* Pods-AirTech-acknowledgements.markdown */,
+				307B2103B8554033F9E3936BDABD201F /* Pods-AirTech-acknowledgements.plist */,
+				09C75C5620951F83474D5FA53FDD2154 /* Pods-AirTech-dummy.m */,
+				68786634DC234FFC0577438EE4689867 /* Pods-AirTech-frameworks.sh */,
+				1B42662D92406F73E78F0E6B45F77663 /* Pods-AirTech-resources.sh */,
+				794B90AE80B8AB04C72F6631AD93054C /* Pods-AirTech.debug.xcconfig */,
+				851FB860985CB94B1002F82AECB45FF1 /* Pods-AirTech.release.xcconfig */,
+			);
+			name = "Pods-AirTech";
+			path = "Target Support Files/Pods-AirTech";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				DE160AE944F7EE90F86EBCDBC8840B65 /* Pods */,
+				823C792237BEAC5FBBF2E837CD035057 /* Products */,
+				B3994968BD0C1B2CE273E86E58880167 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		823C792237BEAC5FBBF2E837CD035057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				217AE0FBB6CD5429AF94B595A0810EAD /* libBEMSimpleLineGraph.a */,
+				64E612D71EB5A8A507625AA9F849C53B /* libPNChart.a */,
+				6AF3187816BECFD9F18CA5A7597BAF19 /* libPods-AirTech.a */,
+				BFFAB98FF4E67B649638FA0BC72BF147 /* libPods-AirTechTests.a */,
+				05CBAACF8FFFC6E16C765645DDE56D05 /* libPods-AirTechUITests.a */,
+				30C7DBCA1349E2971EBAAD02618B202C /* libUICountingLabel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9620539A9984153C301FCDB7C3ADEB55 /* BEMSimpleLineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				801012DE9596156CE714E7F326DA0393 /* BEMAverageLine.h */,
+				1F42FA1857BE7FCCDC7FBE86C4079C79 /* BEMAverageLine.m */,
+				79A672D0F2F1DC020EBD68F9F2BB55E8 /* BEMCircle.h */,
+				67FD1742E241A31A544D5746B05BA884 /* BEMCircle.m */,
+				B1DE4D8366319ED1C6D13C3A3D6C0ED3 /* BEMLine.h */,
+				8219FA31679152D170B2C5C375D4F7D6 /* BEMLine.m */,
+				A3E8622493D633DF2D1B28B47EC7D8BB /* BEMPermanentPopupView.h */,
+				5C0DBCE08CE0CE7DA854D93B4B6A036D /* BEMPermanentPopupView.m */,
+				7297BCF0F88E2E5A7F33E4C6C0B4DAE5 /* BEMSimpleLineGraphView.h */,
+				0EE7F19B3622D70A5FFD7EFCF77C2879 /* BEMSimpleLineGraphView.m */,
+				32C1345790ED85F2A41D63B4010D0A84 /* Support Files */,
+			);
+			name = BEMSimpleLineGraph;
+			path = BEMSimpleLineGraph;
+			sourceTree = "<group>";
+		};
+		A93AD523610353F55C6C08A0B09A675C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF13A9A16EEE1321262AB88E211598 /* PNChart.xcconfig */,
+				14623A8C54D6162966383038ED219370 /* PNChart-dummy.m */,
+				004DB724B84754F93DC31CF7095AB40B /* PNChart-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PNChart";
+			sourceTree = "<group>";
+		};
+		B3994968BD0C1B2CE273E86E58880167 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E19EF18C59F2CB6AC5437260B40E79C /* Pods-AirTech */,
+				03012FF797F89276265D3B4D31437031 /* Pods-AirTechTests */,
+				4DF5B3E7B965CD4ED151FF6F25A1EB76 /* Pods-AirTechUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DE160AE944F7EE90F86EBCDBC8840B65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9620539A9984153C301FCDB7C3ADEB55 /* BEMSimpleLineGraph */,
+				E63B83B65AEF85803444476B55B31402 /* PNChart */,
+				40E0C2BCFA762B29FABEB9472A9682AD /* UICountingLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E63B83B65AEF85803444476B55B31402 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				348284C01AF53EE0A62BF14CC201AD23 /* PNBar.h */,
+				259A67AEF469BACEBCB76134C3220078 /* PNBar.m */,
+				19EB3F7FABCA6116D042D35740AF1B35 /* PNBarChart.h */,
+				998BC8107EE462FAADAD198392AD6A15 /* PNBarChart.m */,
+				3530546B88C814B3FEAB416706964EA4 /* PNChart.h */,
+				FA3EFF957722BB64544DA82D65D3B971 /* PNChartDelegate.h */,
+				45D7DE48DCE6440D7335E325D7B435D8 /* PNChartLabel.h */,
+				314A7037B666EBBD3B057538B823F955 /* PNChartLabel.m */,
+				CE8BB08D82D3B342EBCA54AF9805DE7E /* PNCircleChart.h */,
+				1DFE7E74CFA037E931A4105EECA5F3ED /* PNCircleChart.m */,
+				04B2DAA3CE7632B716D4097B1BC08AF4 /* PNColor.h */,
+				7586E73A810A19A18DB28867BA8A6802 /* PNColor.m */,
+				6E21D4A3E2C16AA02F80938B80FA5B34 /* PNGenericChart.h */,
+				F40491315C2CA9699347D95DCBBBC6D0 /* PNGenericChart.m */,
+				D757C9435E5E489FF565874DB5C8A224 /* PNLineChart.h */,
+				AF27AEA8A7F36C07D756214C8FC88398 /* PNLineChart.m */,
+				70444C6C7A3B5C9B78A6C4C32A6058F3 /* PNLineChartData.h */,
+				DE367F99F03C17ED9272364FC3D47575 /* PNLineChartData.m */,
+				DC53D0B925AFBF098DFD85CDB13BB773 /* PNLineChartDataItem.h */,
+				C48AF194ADC167410BD4EE3B3746C4E9 /* PNLineChartDataItem.m */,
+				398577CB101C396A89C8C8AC65A3BE60 /* PNPieChart.h */,
+				CEBF8B4073AC8218FA330C09DC44BFC7 /* PNPieChart.m */,
+				9F8E02E9DE7FA95332097C2609EAE843 /* PNPieChartDataItem.h */,
+				6645FA9C1A4046A8C1C30F02EBDD31A9 /* PNPieChartDataItem.m */,
+				7028773D93D08A5CC7F4CD81E1F96BD8 /* PNRadarChart.h */,
+				3DCCC5B0FE6CBB23A5B569DCAD33519F /* PNRadarChart.m */,
+				CF424B9EA2EA7137F30BED9ADC37AD2A /* PNRadarChartDataItem.h */,
+				6F371340305202BA7E999E2A07C17208 /* PNRadarChartDataItem.m */,
+				A7F25E1CBCD71C1157D556194EF868CD /* PNScatterChart.h */,
+				57CBE7118F1E313DE36EB4A39EA16FAD /* PNScatterChart.m */,
+				5D1467BEFF82679C0DFD5C27DCF9B110 /* PNScatterChartData.h */,
+				DBBF8DEDC9BD2C6B02E1080581B7F9AA /* PNScatterChartData.m */,
+				9F5EFC29BD7C516F78630C2D01DFF967 /* PNScatterChartDataItem.h */,
+				DB57AADE824CBE90451ADE75A34A1C97 /* PNScatterChartDataItem.m */,
+				A93AD523610353F55C6C08A0B09A675C /* Support Files */,
+			);
+			name = PNChart;
+			path = PNChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		92AA2A7799626C9AF8697C31F0D83095 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B63CB2121F7B6719EE5832DE968692C /* PNBar.h in Headers */,
+				F66E801DEECA2340292AE69D7B102006 /* PNBarChart.h in Headers */,
+				25AB89F3A44780A3B663C620EB98B58A /* PNChart.h in Headers */,
+				C08D81AD3719A925A3462D346DEC1C0F /* PNChartDelegate.h in Headers */,
+				BA23D123DB4E8DE763BA887B508E5A3D /* PNChartLabel.h in Headers */,
+				E98DF2071427D3532C78495B9DC145A2 /* PNCircleChart.h in Headers */,
+				55A68BEC6EE7918014C13E93A9712BA9 /* PNColor.h in Headers */,
+				615DEF6EC11FC2A1FD402B4D2A024769 /* PNGenericChart.h in Headers */,
+				75597738D77785C9C4A5AA4AA7178C0C /* PNLineChart.h in Headers */,
+				AB02D77F0AB1E185B23D6F6A8C845C32 /* PNLineChartData.h in Headers */,
+				DB9E2926F467F925EF997634EA625F2B /* PNLineChartDataItem.h in Headers */,
+				F8CC8930BD144EA6C090EC018555BA9D /* PNPieChart.h in Headers */,
+				A40FD707AE7598006F7A29E56273AC92 /* PNPieChartDataItem.h in Headers */,
+				FD8A7048D93A1CAC3C203F38A28D9F36 /* PNRadarChart.h in Headers */,
+				AD7A45280067E32661352A300AAAB499 /* PNRadarChartDataItem.h in Headers */,
+				B3EB59B53EECE7B211D8945339AEBBC3 /* PNScatterChart.h in Headers */,
+				575081A3B88FCC47681A8677B76CC0A8 /* PNScatterChartData.h in Headers */,
+				6E59A19C433EF4F8C8A7673CF0DC2DC9 /* PNScatterChartDataItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC450C39358125858247E8A76C26C25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C729E1EA0EA97AB45B866C9AF21301 /* BEMAverageLine.h in Headers */,
+				E1CDB62E948DFB819A89EEB26FAEBED8 /* BEMCircle.h in Headers */,
+				4850AF5F4CA6F0AF6D019E81C8736EB2 /* BEMLine.h in Headers */,
+				5449C7A9E6C4A0BAF7F8953C38AFB375 /* BEMPermanentPopupView.h in Headers */,
+				867815EEDD60DBF7C1A91DCA2C452653 /* BEMSimpleLineGraphView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6471DAA9D3110CD855BE6DFA4F1E48C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEEF28820A2181068AD4D6012BC9F38C /* UICountingLabel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		19CDD452D051F373B511A17BC6287F8F /* Pods-AirTechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2628BA3F79302E2773D8303C35A0A4 /* Build configuration list for PBXNativeTarget "Pods-AirTechUITests" */;
+			buildPhases = (
+				8FB3BAAEE597EAB9025167E1F3ADAF4F /* Sources */,
+				7879D276EFD3961153E054CE10BD60AD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AirTechUITests";
+			productName = "Pods-AirTechUITests";
+			productReference = 05CBAACF8FFFC6E16C765645DDE56D05 /* libPods-AirTechUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3214A3693D405BD3650E7EEBB20C94D7 /* Build configuration list for PBXNativeTarget "BEMSimpleLineGraph" */;
+			buildPhases = (
+				B655767A17E3085DBE322D7B8E94B1D1 /* Sources */,
+				C8D154E1CEEA236B276947B6CC1BE4CF /* Frameworks */,
+				BBC450C39358125858247E8A76C26C25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEMSimpleLineGraph;
+			productName = BEMSimpleLineGraph;
+			productReference = 217AE0FBB6CD5429AF94B595A0810EAD /* libBEMSimpleLineGraph.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3CB5281EDDEEE71090362B7FE83B4403 /* Pods-AirTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A67CCC51CEC9463C4279C5B6EDDA3D01 /* Build configuration list for PBXNativeTarget "Pods-AirTech" */;
+			buildPhases = (
+				BB78697762FDB12E0243B5E92905D9FA /* Sources */,
+				4B12A45F179F0A02BBC1D780DC85A815 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				596A2498B9F61280ED5484C3D71689C3 /* PBXTargetDependency */,
+				7484DAEC9C86B6169B4EBBE97D0DDDC4 /* PBXTargetDependency */,
+				F2D2F63646F4D25A41BA1DBB611F444D /* PBXTargetDependency */,
+			);
+			name = "Pods-AirTech";
+			productName = "Pods-AirTech";
+			productReference = 6AF3187816BECFD9F18CA5A7597BAF19 /* libPods-AirTech.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79DB03F4E7FF086B7FFD5D5B6FAE1668 /* Build configuration list for PBXNativeTarget "PNChart" */;
+			buildPhases = (
+				E8AD73929E5F8B79DC17E8D96855D318 /* Sources */,
+				F2A8C1F4EBC9C0AA630A008C2EE83185 /* Frameworks */,
+				92AA2A7799626C9AF8697C31F0D83095 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFE21E14DF63D0C035C8B24290F148D1 /* PBXTargetDependency */,
+			);
+			name = PNChart;
+			productName = PNChart;
+			productReference = 64E612D71EB5A8A507625AA9F849C53B /* libPNChart.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9F6A3B43F78D2C2B16A55AF725B53A /* Build configuration list for PBXNativeTarget "UICountingLabel" */;
+			buildPhases = (
+				45C44BD1A93E0267EE3D09458AE97D15 /* Sources */,
+				89010C3374E413433CB78B771911DDE6 /* Frameworks */,
+				E6471DAA9D3110CD855BE6DFA4F1E48C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UICountingLabel;
+			productName = UICountingLabel;
+			productReference = 30C7DBCA1349E2971EBAAD02618B202C /* libUICountingLabel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EF3BB76EBCF10E67458785641B7B1AF1 /* Pods-AirTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E0BB9982B2C96E6DFB8C13DEDD52D10 /* Build configuration list for PBXNativeTarget "Pods-AirTechTests" */;
+			buildPhases = (
+				30DDFD26F082B6B30E7731E0AB527409 /* Sources */,
+				91DBB11D8CEAE777C4F8906914915C5B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AirTechTests";
+			productName = "Pods-AirTechTests";
+			productReference = BFFAB98FF4E67B649638FA0BC72BF147 /* libPods-AirTechTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 823C792237BEAC5FBBF2E837CD035057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */,
+				9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */,
+				3CB5281EDDEEE71090362B7FE83B4403 /* Pods-AirTech */,
+				EF3BB76EBCF10E67458785641B7B1AF1 /* Pods-AirTechTests */,
+				19CDD452D051F373B511A17BC6287F8F /* Pods-AirTechUITests */,
+				EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30DDFD26F082B6B30E7731E0AB527409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3B1F24383FEE82D140194E41BC9CE46 /* Pods-AirTechTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C44BD1A93E0267EE3D09458AE97D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCEB6D707FF2288C67076D61DC83359 /* UICountingLabel-dummy.m in Sources */,
+				4E723CDC3A28C236857F43B7BEDDE104 /* UICountingLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB3BAAEE597EAB9025167E1F3ADAF4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F3648D441EE853C411C511B4B1F852 /* Pods-AirTechUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B655767A17E3085DBE322D7B8E94B1D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF987E16E146ACC52EA930F005835981 /* BEMAverageLine.m in Sources */,
+				A9C3D307358C2999F57EE7618D819C26 /* BEMCircle.m in Sources */,
+				1656E4B979886F4721143BD5FBF009BA /* BEMLine.m in Sources */,
+				F9D31053190166EB68C4015A91E01E2C /* BEMPermanentPopupView.m in Sources */,
+				CFAB562865885A2260B53B6966C6A5EA /* BEMSimpleLineGraph-dummy.m in Sources */,
+				C4EC6A8E94207C5B17FC1E5F74178DB7 /* BEMSimpleLineGraphView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB78697762FDB12E0243B5E92905D9FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C521EF038034F574FEBD781EEAE4507 /* Pods-AirTech-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8AD73929E5F8B79DC17E8D96855D318 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6857E6849C1FFA1607FC74148029092F /* PNBar.m in Sources */,
+				F611AA85C69D5CCCC4EBCEEA3FCE8CA4 /* PNBarChart.m in Sources */,
+				EC6C9B809A9A894CAB42FABA607299EE /* PNChart-dummy.m in Sources */,
+				4A86BE0174028E1B00350960B760AF47 /* PNChartLabel.m in Sources */,
+				A354F7D1671D9863046A969B0994A700 /* PNCircleChart.m in Sources */,
+				44BEDBB67467AC59936D95E028317B51 /* PNColor.m in Sources */,
+				B8D160C00EEAA55BFCA2125123F0C052 /* PNGenericChart.m in Sources */,
+				6FD810FC9EB0917CF0EE40E7D0130BEB /* PNLineChart.m in Sources */,
+				7FD5D44ADD57BF55545D50A9C3E2C9B3 /* PNLineChartData.m in Sources */,
+				63AB11A5E4106F71E026FDD3AE5C0819 /* PNLineChartDataItem.m in Sources */,
+				D813E5D4CDB2B46BE2D9DF09A90AC2C3 /* PNPieChart.m in Sources */,
+				624A60476E1BB9046DB006F6CD501753 /* PNPieChartDataItem.m in Sources */,
+				D1664321FFCA6026D6E85978A1AFE3EC /* PNRadarChart.m in Sources */,
+				1577F10389CE25DBE59F9AE0FA20E2B3 /* PNRadarChartDataItem.m in Sources */,
+				0B892692A603D8BCC8A8F01DDD275C8B /* PNScatterChart.m in Sources */,
+				09D9097831C9FEA183EF7A817447BB53 /* PNScatterChartData.m in Sources */,
+				6B46ACEE4DD1DCDE7EC53A046D9C644F /* PNScatterChartDataItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		596A2498B9F61280ED5484C3D71689C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMSimpleLineGraph;
+			target = 2072D1DF5BFD9E8B5826A6936EED91A9 /* BEMSimpleLineGraph */;
+			targetProxy = 7D75F7704E507AA449B7B0381B18D6AF /* PBXContainerItemProxy */;
+		};
+		7484DAEC9C86B6169B4EBBE97D0DDDC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PNChart;
+			target = 9D4A1B69057B2ACDCF903EC15F099E33 /* PNChart */;
+			targetProxy = B6025D4FBDA5A17C4AD45053E430FD8D /* PBXContainerItemProxy */;
+		};
+		EFE21E14DF63D0C035C8B24290F148D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICountingLabel;
+			target = EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */;
+			targetProxy = C9E220EA5540AEFB0ECD8F05CF8153CD /* PBXContainerItemProxy */;
+		};
+		F2D2F63646F4D25A41BA1DBB611F444D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UICountingLabel;
+			target = EB31A05090143EAF02A3DE187E2CBA22 /* UICountingLabel */;
+			targetProxy = ADFC916BABD10ADE04ED16C02FF2AC84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0443B67BDE6572D771568D43EBF00687 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFF13A9A16EEE1321262AB88E211598 /* PNChart.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PNChart/PNChart-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2B43E2B35F941BC5D00A680516BCF3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E21C53624C3E731E2AFE993F8EE5A00 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		425D2E763EA2601FD8F2CB15D612AB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E21C53624C3E731E2AFE993F8EE5A00 /* UICountingLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		588F05A9CFBD12DC5000EAB3FB958F20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520CB745DEA2F945FADBFC7EF97C5583 /* Pods-AirTechTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		61170588CD3AE98206AAEE32D27FA949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFF13A9A16EEE1321262AB88E211598 /* PNChart.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PNChart/PNChart-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7B8A2D1D9D4A201B34BD1813CF250AA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 975140311E1C3E861EEB4981DECD9F63 /* BEMSimpleLineGraph.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7DAF3C16F9D2BF9630A1B4B3B5B84DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851FB860985CB94B1002F82AECB45FF1 /* Pods-AirTech.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8F7DA95A55240617A7DF5D67FABDB3BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABACDADD43EEC87A94875BE3F2D815EE /* Pods-AirTechUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B2A6B2361324A32EBC7E09AAD66E8CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B623AD4C5AFDD64898BE57BD3AEBA58A /* Pods-AirTechUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B5E43BE38C74977DEE4DD0A415B556AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 794B90AE80B8AB04C72F6631AD93054C /* Pods-AirTech.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA9DBF89F2D989F1FD1F47CB5B727216 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 975140311E1C3E861EEB4981DECD9F63 /* BEMSimpleLineGraph.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMSimpleLineGraph/BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CF9DE15AD368202746163C304D56660E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504B603BB738EE53BA70E26E995C59F7 /* Pods-AirTechTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B2628BA3F79302E2773D8303C35A0A4 /* Build configuration list for PBXNativeTarget "Pods-AirTechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A6B2361324A32EBC7E09AAD66E8CD1 /* Debug */,
+				8F7DA95A55240617A7DF5D67FABDB3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E0BB9982B2C96E6DFB8C13DEDD52D10 /* Build configuration list for PBXNativeTarget "Pods-AirTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF9DE15AD368202746163C304D56660E /* Debug */,
+				588F05A9CFBD12DC5000EAB3FB958F20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3214A3693D405BD3650E7EEBB20C94D7 /* Build configuration list for PBXNativeTarget "BEMSimpleLineGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9DBF89F2D989F1FD1F47CB5B727216 /* Debug */,
+				7B8A2D1D9D4A201B34BD1813CF250AA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79DB03F4E7FF086B7FFD5D5B6FAE1668 /* Build configuration list for PBXNativeTarget "PNChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0443B67BDE6572D771568D43EBF00687 /* Debug */,
+				61170588CD3AE98206AAEE32D27FA949 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A67CCC51CEC9463C4279C5B6EDDA3D01 /* Build configuration list for PBXNativeTarget "Pods-AirTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E43BE38C74977DEE4DD0A415B556AB /* Debug */,
+				7DAF3C16F9D2BF9630A1B4B3B5B84DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE9F6A3B43F78D2C2B16A55AF725B53A /* Build configuration list for PBXNativeTarget "UICountingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B43E2B35F941BC5D00A680516BCF3EC /* Debug */,
+				425D2E763EA2601FD8F2CB15D612AB25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

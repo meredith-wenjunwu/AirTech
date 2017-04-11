@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rcw-iX-lnm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guide View Controller-->
+        <scene sceneID="VdA-Zd-kbe">
+            <objects>
+                <collectionViewController storyboardIdentifier="Guide" id="rcw-iX-lnm" customClass="GuideViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="Wpx-lY-EBk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.20844184029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zv0-Vi-cJ5" customClass="CollectionViewFlowLayout">
+                            <size key="itemSize" width="374" height="667"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="28B-Ob-kea" customClass="GuideCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XMm-5Z-KeG">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="667"/>
+                                        </imageView>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx0-zM-TEr" customClass="BorderButton">
+                                            <rect key="frame" x="112" y="573" width="150" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="8mO-dH-GoW"/>
+                                                <constraint firstAttribute="height" constant="44" id="Pqj-cu-znG"/>
+                                            </constraints>
+                                            <state key="normal" title="Enter Now">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="22"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="Aeq-7n-Ca1" kind="show" id="S1D-rj-cXc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XMm-5Z-KeG" secondAttribute="trailing" id="MSs-mb-i5G"/>
+                                    <constraint firstItem="XMm-5Z-KeG" firstAttribute="top" secondItem="28B-Ob-kea" secondAttribute="top" id="NhG-BJ-zTK"/>
+                                    <constraint firstAttribute="bottom" secondItem="XMm-5Z-KeG" secondAttribute="bottom" id="Yz2-5C-u9l"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tx0-zM-TEr" secondAttribute="bottom" constant="50" id="pyM-8i-URo"/>
+                                    <constraint firstItem="Tx0-zM-TEr" firstAttribute="centerX" secondItem="28B-Ob-kea" secondAttribute="centerX" id="seZ-4s-RZZ"/>
+                                    <constraint firstItem="XMm-5Z-KeG" firstAttribute="leading" secondItem="28B-Ob-kea" secondAttribute="leading" id="zbY-32-Qmf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="bgImgaeView" destination="XMm-5Z-KeG" id="lAg-cP-LTJ"/>
+                                    <outlet property="pushButton" destination="Tx0-zM-TEr" id="bw5-k2-RAn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="rcw-iX-lnm" id="7Mx-Tk-jql"/>
+                            <outlet property="delegate" destination="rcw-iX-lnm" id="N8o-vx-uZB"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5qX-kp-Qs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835.5" y="-30.5"/>
+        </scene>
+        <!--MianTabr-->
+        <scene sceneID="YMq-5L-UKg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MianTabr" id="Aeq-7n-Ca1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MA5-fs-Ssy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="462"/>
+        </scene>
+    </scenes>
+</document>

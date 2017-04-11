@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2aD-Em-WFo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="yiw-Zk-DDq">
+            <objects>
+                <navigationController id="2aD-Em-WFo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KBo-79-FX3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k2h-Fc-Haq" kind="relationship" relationship="rootViewController" id="Ibc-eH-fvT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDV-xg-mof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="176"/>
+        </scene>
+        <!--Home Page-->
+        <scene sceneID="ZXP-ZH-3mn">
+            <objects>
+                <viewController id="k2h-Fc-Haq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oa1-Yo-bGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="LfF-09-5je"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iwk-8R-4Wc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comparison Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-4j-Czf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="399"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LfF-09-5je" firstAttribute="top" secondItem="4Mm-4j-Czf" secondAttribute="bottom" constant="204" id="BTK-Fs-qBt"/>
+                            <constraint firstItem="4Mm-4j-Czf" firstAttribute="leading" secondItem="iwk-8R-4Wc" secondAttribute="leading" id="FjE-Pr-2E4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Mm-4j-Czf" secondAttribute="trailing" constant="-16" id="eI8-cK-6DW"/>
+                            <constraint firstItem="4Mm-4j-Czf" firstAttribute="top" secondItem="oa1-Yo-bGn" secondAttribute="bottom" id="eZI-Aq-5Ya"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Page" id="9KP-eu-kmw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Coj-uv-36F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="175.86206896551727"/>
+        </scene>
+    </scenes>
+</document>

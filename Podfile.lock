@@ -1,0 +1,18 @@
+PODS:
+  - BEMSimpleLineGraph (4.1)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
+
+DEPENDENCIES:
+  - BEMSimpleLineGraph
+  - PNChart
+
+SPEC CHECKSUMS:
+  BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+
+PODFILE CHECKSUM: e3bf28d56731f7f0e1c89f914d5f373b8aa7b2a2
+
+COCOAPODS: 1.2.0

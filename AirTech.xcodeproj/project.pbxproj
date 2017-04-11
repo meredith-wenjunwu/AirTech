@@ -1,0 +1,886 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25BD64D0A56C21C1FBE9B93D /* libPods-AirTechUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D091A517FAF6FF1AEEFEC0D9 /* libPods-AirTechUITests.a */; };
+		61D0EEE11E9C20CD002A00F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61D0EEDF1E9C20CD002A00F7 /* Model.xcdatamodeld */; };
+		61D0EEE41E9C4CB3002A00F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */; };
+		61D0EFD01E9C6B9F002A00F7 /* DataVisualization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */; };
+		61D0EFD91E9C6E89002A00F7 /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0EFD81E9C6E89002A00F7 /* LineViewController.m */; };
+		835D01411E247F1E0053E40E /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D01401E247F1E0053E40E /* PushViewController.m */; };
+		835D01471E24B1070053E40E /* homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D01461E24B1070053E40E /* homepage.storyboard */; };
+		835D01491E24B3930053E40E /* AbouMe .storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D01481E24B3930053E40E /* AbouMe .storyboard */; };
+		835D014B1E24B3F00053E40E /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D014A1E24B3F00053E40E /* Push.storyboard */; };
+		835D014E1E24B4D90053E40E /* CenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835D014D1E24B4D90053E40E /* CenterView.m */; };
+		835D01501E24B57D0053E40E /* CenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835D014F1E24B57D0053E40E /* CenterView.xib */; };
+		83664C811E23380600CA2BC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664C801E23380600CA2BC9 /* main.m */; };
+		83664C841E23380600CA2BC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664C831E23380600CA2BC9 /* AppDelegate.m */; };
+		83664C8C1E23380600CA2BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83664C8B1E23380600CA2BC9 /* Assets.xcassets */; };
+		83664C8F1E23380600CA2BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83664C8D1E23380600CA2BC9 /* LaunchScreen.storyboard */; };
+		83664C9A1E23380600CA2BC9 /* AirTechTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664C991E23380600CA2BC9 /* AirTechTests.m */; };
+		83664CA51E23380600CA2BC9 /* AirTechUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664CA41E23380600CA2BC9 /* AirTechUITests.m */; };
+		83664CB41E23386900CA2BC9 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664CB31E23386900CA2BC9 /* GuideViewController.m */; };
+		83664CB71E2338BE00CA2BC9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664CB61E2338BE00CA2BC9 /* LoginViewController.m */; };
+		83664CB91E23398600CA2BC9 /* Guide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83664CB81E23398600CA2BC9 /* Guide.storyboard */; };
+		83664CBE1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664CBD1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m */; };
+		83664CC41E233F1900CA2BC9 /* GuideCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664CC31E233F1900CA2BC9 /* GuideCollectionViewCell.m */; };
+		83664D0F1E235E4600CA2BC9 /* BorderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664D0E1E235E4600CA2BC9 /* BorderButton.m */; };
+		83664D1C1E236F8400CA2BC9 /* MianTabr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83664D1B1E236F8400CA2BC9 /* MianTabr.storyboard */; };
+		83664D1F1E23718500CA2BC9 /* MianTabrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664D1E1E23718500CA2BC9 /* MianTabrViewController.m */; };
+		83664D221E237BA400CA2BC9 /* UIVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664D211E237BA400CA2BC9 /* UIVerticalButton.m */; };
+		83664D281E2393DE00CA2BC9 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83664D271E2393DE00CA2BC9 /* MeViewController.m */; };
+		CA2A98282C45D08AD1EFF5E9 /* libPods-AirTech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0286B571643E6DD27071A99F /* libPods-AirTech.a */; };
+		D6D6D666BBFE4C20308AA932 /* libPods-AirTechTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B123A29A55367E8F77AC9C8 /* libPods-AirTechTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83664C961E23380600CA2BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83664C741E23380600CA2BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83664C7B1E23380600CA2BC9;
+			remoteInfo = GuideSKY;
+		};
+		83664CA11E23380600CA2BC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83664C741E23380600CA2BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83664C7B1E23380600CA2BC9;
+			remoteInfo = GuideSKY;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0286B571643E6DD27071A99F /* libPods-AirTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C87AAD9BC291778D01B6964 /* Pods-AirTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTechTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTechTests/Pods-AirTechTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B123A29A55367E8F77AC9C8 /* libPods-AirTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61D0EEE01E9C20CD002A00F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		61D0EEE51E9C4D00002A00F7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataVisualization.storyboard; sourceTree = "<group>"; };
+		61D0EFD71E9C6E89002A00F7 /* LineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
+		61D0EFD81E9C6E89002A00F7 /* LineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
+		835D013F1E247F1E0053E40E /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		835D01401E247F1E0053E40E /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		835D01461E24B1070053E40E /* homepage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = homepage.storyboard; sourceTree = "<group>"; };
+		835D01481E24B3930053E40E /* AbouMe .storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "AbouMe .storyboard"; sourceTree = "<group>"; };
+		835D014A1E24B3F00053E40E /* Push.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Push.storyboard; sourceTree = "<group>"; };
+		835D014C1E24B4D90053E40E /* CenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterView.h; sourceTree = "<group>"; };
+		835D014D1E24B4D90053E40E /* CenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterView.m; sourceTree = "<group>"; };
+		835D014F1E24B57D0053E40E /* CenterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterView.xib; sourceTree = "<group>"; };
+		83664C7C1E23380600CA2BC9 /* AirTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83664C801E23380600CA2BC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83664C821E23380600CA2BC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83664C831E23380600CA2BC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83664C8B1E23380600CA2BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83664C8E1E23380600CA2BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83664C901E23380600CA2BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83664C951E23380600CA2BC9 /* AirTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83664C991E23380600CA2BC9 /* AirTechTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirTechTests.m; sourceTree = "<group>"; };
+		83664C9B1E23380600CA2BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83664CA01E23380600CA2BC9 /* AirTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83664CA41E23380600CA2BC9 /* AirTechUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirTechUITests.m; sourceTree = "<group>"; };
+		83664CA61E23380600CA2BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83664CB21E23386900CA2BC9 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		83664CB31E23386900CA2BC9 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		83664CB51E2338BE00CA2BC9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		83664CB61E2338BE00CA2BC9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		83664CB81E23398600CA2BC9 /* Guide.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Guide.storyboard; sourceTree = "<group>"; };
+		83664CBC1E233C0A00CA2BC9 /* CollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		83664CBD1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		83664CC21E233F1900CA2BC9 /* GuideCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideCollectionViewCell.h; sourceTree = "<group>"; };
+		83664CC31E233F1900CA2BC9 /* GuideCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCollectionViewCell.m; sourceTree = "<group>"; };
+		83664D0D1E235E4600CA2BC9 /* BorderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderButton.h; sourceTree = "<group>"; };
+		83664D0E1E235E4600CA2BC9 /* BorderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderButton.m; sourceTree = "<group>"; };
+		83664D1B1E236F8400CA2BC9 /* MianTabr.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MianTabr.storyboard; sourceTree = "<group>"; };
+		83664D1D1E23718500CA2BC9 /* MianTabrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MianTabrViewController.h; sourceTree = "<group>"; };
+		83664D1E1E23718500CA2BC9 /* MianTabrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MianTabrViewController.m; sourceTree = "<group>"; };
+		83664D201E237BA400CA2BC9 /* UIVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIVerticalButton.h; sourceTree = "<group>"; };
+		83664D211E237BA400CA2BC9 /* UIVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIVerticalButton.m; sourceTree = "<group>"; };
+		83664D261E2393DE00CA2BC9 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		83664D271E2393DE00CA2BC9 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		90BF09E8AF2F1A2097025515 /* Pods-AirTechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTechUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTechUITests/Pods-AirTechUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5F9B63B3B0A080186323562 /* Pods-AirTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTechUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTechUITests/Pods-AirTechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B727C7FCE2B5EB55897E7A3D /* Pods-AirTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTech/Pods-AirTech.release.xcconfig"; sourceTree = "<group>"; };
+		D091A517FAF6FF1AEEFEC0D9 /* libPods-AirTechUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTechUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5DA76B19D5A92E37E789197 /* Pods-AirTechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTechTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirTechTests/Pods-AirTechTests.release.xcconfig"; sourceTree = "<group>"; };
+		E76725D4E168C7D641188508 /* Pods-AirTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTech/Pods-AirTech.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83664C791E23380600CA2BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61D0EEE41E9C4CB3002A00F7 /* CoreData.framework in Frameworks */,
+				CA2A98282C45D08AD1EFF5E9 /* libPods-AirTech.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C921E23380600CA2BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D6D666BBFE4C20308AA932 /* libPods-AirTechTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C9D1E23380600CA2BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BD64D0A56C21C1FBE9B93D /* libPods-AirTechUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61D0EEE21E9C4CB3002A00F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */,
+				0286B571643E6DD27071A99F /* libPods-AirTech.a */,
+				1B123A29A55367E8F77AC9C8 /* libPods-AirTechTests.a */,
+				D091A517FAF6FF1AEEFEC0D9 /* libPods-AirTechUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83664C731E23380600CA2BC9 = {
+			isa = PBXGroup;
+			children = (
+				83664C7E1E23380600CA2BC9 /* AirTech */,
+				83664C981E23380600CA2BC9 /* AirTechTests */,
+				83664CA31E23380600CA2BC9 /* GuideSKYUITests */,
+				83664C7D1E23380600CA2BC9 /* Products */,
+				61D0EEE21E9C4CB3002A00F7 /* Frameworks */,
+				849FACC963CD941E31947064 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		83664C7D1E23380600CA2BC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83664C7C1E23380600CA2BC9 /* AirTech.app */,
+				83664C951E23380600CA2BC9 /* AirTechTests.xctest */,
+				83664CA01E23380600CA2BC9 /* AirTechUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83664C7E1E23380600CA2BC9 /* AirTech */ = {
+			isa = PBXGroup;
+			children = (
+				83664D101E23660300CA2BC9 /* base */,
+				83664D151E23668500CA2BC9 /* other */,
+				83664C7F1E23380600CA2BC9 /* Supporting Files */,
+			);
+			name = AirTech;
+			path = GuideSKY;
+			sourceTree = "<group>";
+		};
+		83664C7F1E23380600CA2BC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61D0EEE51E9C4D00002A00F7 /* PrefixHeader.pch */,
+				83664C801E23380600CA2BC9 /* main.m */,
+				61D0EEDF1E9C20CD002A00F7 /* Model.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83664C981E23380600CA2BC9 /* AirTechTests */ = {
+			isa = PBXGroup;
+			children = (
+				83664C991E23380600CA2BC9 /* AirTechTests.m */,
+				83664C9B1E23380600CA2BC9 /* Info.plist */,
+			);
+			name = AirTechTests;
+			path = GuideSKYTests;
+			sourceTree = "<group>";
+		};
+		83664CA31E23380600CA2BC9 /* GuideSKYUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83664CA41E23380600CA2BC9 /* AirTechUITests.m */,
+				83664CA61E23380600CA2BC9 /* Info.plist */,
+			);
+			path = GuideSKYUITests;
+			sourceTree = "<group>";
+		};
+		83664D101E23660300CA2BC9 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				83664D161E2366AF00CA2BC9 /* Image */,
+				83664D131E23663D00CA2BC9 /* storyBoard */,
+				83664D141E23667000CA2BC9 /* view */,
+				83664D111E23660F00CA2BC9 /* contoller */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		83664D111E23660F00CA2BC9 /* contoller */ = {
+			isa = PBXGroup;
+			children = (
+				61D0EFD71E9C6E89002A00F7 /* LineViewController.h */,
+				61D0EFD81E9C6E89002A00F7 /* LineViewController.m */,
+				83664D261E2393DE00CA2BC9 /* MeViewController.h */,
+				83664D271E2393DE00CA2BC9 /* MeViewController.m */,
+				83664CB21E23386900CA2BC9 /* GuideViewController.h */,
+				83664CB31E23386900CA2BC9 /* GuideViewController.m */,
+				83664CB51E2338BE00CA2BC9 /* LoginViewController.h */,
+				83664CB61E2338BE00CA2BC9 /* LoginViewController.m */,
+				83664D1D1E23718500CA2BC9 /* MianTabrViewController.h */,
+				83664D1E1E23718500CA2BC9 /* MianTabrViewController.m */,
+				835D013F1E247F1E0053E40E /* PushViewController.h */,
+				835D01401E247F1E0053E40E /* PushViewController.m */,
+			);
+			name = contoller;
+			sourceTree = "<group>";
+		};
+		83664D131E23663D00CA2BC9 /* storyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				83664C8D1E23380600CA2BC9 /* LaunchScreen.storyboard */,
+				83664CB81E23398600CA2BC9 /* Guide.storyboard */,
+				83664D1B1E236F8400CA2BC9 /* MianTabr.storyboard */,
+				835D01461E24B1070053E40E /* homepage.storyboard */,
+				835D01481E24B3930053E40E /* AbouMe .storyboard */,
+				835D014A1E24B3F00053E40E /* Push.storyboard */,
+				61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */,
+			);
+			name = storyBoard;
+			sourceTree = "<group>";
+		};
+		83664D141E23667000CA2BC9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				83664CBC1E233C0A00CA2BC9 /* CollectionViewFlowLayout.h */,
+				83664CBD1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m */,
+				83664CC21E233F1900CA2BC9 /* GuideCollectionViewCell.h */,
+				83664CC31E233F1900CA2BC9 /* GuideCollectionViewCell.m */,
+				83664D0D1E235E4600CA2BC9 /* BorderButton.h */,
+				83664D0E1E235E4600CA2BC9 /* BorderButton.m */,
+				83664D201E237BA400CA2BC9 /* UIVerticalButton.h */,
+				83664D211E237BA400CA2BC9 /* UIVerticalButton.m */,
+				835D014C1E24B4D90053E40E /* CenterView.h */,
+				835D014D1E24B4D90053E40E /* CenterView.m */,
+				835D014F1E24B57D0053E40E /* CenterView.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		83664D151E23668500CA2BC9 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				83664C901E23380600CA2BC9 /* Info.plist */,
+				83664C821E23380600CA2BC9 /* AppDelegate.h */,
+				83664C831E23380600CA2BC9 /* AppDelegate.m */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		83664D161E2366AF00CA2BC9 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				83664C8B1E23380600CA2BC9 /* Assets.xcassets */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		849FACC963CD941E31947064 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E76725D4E168C7D641188508 /* Pods-AirTech.debug.xcconfig */,
+				B727C7FCE2B5EB55897E7A3D /* Pods-AirTech.release.xcconfig */,
+				0C87AAD9BC291778D01B6964 /* Pods-AirTechTests.debug.xcconfig */,
+				E5DA76B19D5A92E37E789197 /* Pods-AirTechTests.release.xcconfig */,
+				90BF09E8AF2F1A2097025515 /* Pods-AirTechUITests.debug.xcconfig */,
+				A5F9B63B3B0A080186323562 /* Pods-AirTechUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83664C7B1E23380600CA2BC9 /* AirTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83664CA91E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTech" */;
+			buildPhases = (
+				59ED5C78B246A7E2B8CC4ED1 /* [CP] Check Pods Manifest.lock */,
+				83664C781E23380600CA2BC9 /* Sources */,
+				83664C791E23380600CA2BC9 /* Frameworks */,
+				83664C7A1E23380600CA2BC9 /* Resources */,
+				1D520974D2CA96BC09BB60FD /* [CP] Embed Pods Frameworks */,
+				3DF2B9192BAC1E6D535EBA65 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirTech;
+			productName = GuideSKY;
+			productReference = 83664C7C1E23380600CA2BC9 /* AirTech.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83664C941E23380600CA2BC9 /* AirTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83664CAC1E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTechTests" */;
+			buildPhases = (
+				852D404F4E59786E2E3913E7 /* [CP] Check Pods Manifest.lock */,
+				83664C911E23380600CA2BC9 /* Sources */,
+				83664C921E23380600CA2BC9 /* Frameworks */,
+				83664C931E23380600CA2BC9 /* Resources */,
+				B9CFDB0F287619187FE99EA0 /* [CP] Embed Pods Frameworks */,
+				DDC05818E15568390B3DFFC8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83664C971E23380600CA2BC9 /* PBXTargetDependency */,
+			);
+			name = AirTechTests;
+			productName = GuideSKYTests;
+			productReference = 83664C951E23380600CA2BC9 /* AirTechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83664C9F1E23380600CA2BC9 /* AirTechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83664CAF1E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTechUITests" */;
+			buildPhases = (
+				4579CC0FA3F2E9C7C8B9C98C /* [CP] Check Pods Manifest.lock */,
+				83664C9C1E23380600CA2BC9 /* Sources */,
+				83664C9D1E23380600CA2BC9 /* Frameworks */,
+				83664C9E1E23380600CA2BC9 /* Resources */,
+				E30FB9493A175D32E782E0B0 /* [CP] Embed Pods Frameworks */,
+				97C765E4FDC4E1152A8CCF22 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83664CA21E23380600CA2BC9 /* PBXTargetDependency */,
+			);
+			name = AirTechUITests;
+			productName = GuideSKYUITests;
+			productReference = 83664CA01E23380600CA2BC9 /* AirTechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83664C741E23380600CA2BC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Georgia Tech";
+				TargetAttributes = {
+					83664C7B1E23380600CA2BC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9SXWYN294A;
+						ProvisioningStyle = Automatic;
+					};
+					83664C941E23380600CA2BC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3PEAZ5DQY8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 83664C7B1E23380600CA2BC9;
+					};
+					83664C9F1E23380600CA2BC9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3PEAZ5DQY8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 83664C7B1E23380600CA2BC9;
+					};
+				};
+			};
+			buildConfigurationList = 83664C771E23380600CA2BC9 /* Build configuration list for PBXProject "AirTech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83664C731E23380600CA2BC9;
+			productRefGroup = 83664C7D1E23380600CA2BC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83664C7B1E23380600CA2BC9 /* AirTech */,
+				83664C941E23380600CA2BC9 /* AirTechTests */,
+				83664C9F1E23380600CA2BC9 /* AirTechUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83664C7A1E23380600CA2BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83664C8F1E23380600CA2BC9 /* LaunchScreen.storyboard in Resources */,
+				835D01471E24B1070053E40E /* homepage.storyboard in Resources */,
+				61D0EFD01E9C6B9F002A00F7 /* DataVisualization.storyboard in Resources */,
+				835D01491E24B3930053E40E /* AbouMe .storyboard in Resources */,
+				835D01501E24B57D0053E40E /* CenterView.xib in Resources */,
+				83664C8C1E23380600CA2BC9 /* Assets.xcassets in Resources */,
+				83664CB91E23398600CA2BC9 /* Guide.storyboard in Resources */,
+				835D014B1E24B3F00053E40E /* Push.storyboard in Resources */,
+				83664D1C1E236F8400CA2BC9 /* MianTabr.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C931E23380600CA2BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C9E1E23380600CA2BC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D520974D2CA96BC09BB60FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTech/Pods-AirTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DF2B9192BAC1E6D535EBA65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTech/Pods-AirTech-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4579CC0FA3F2E9C7C8B9C98C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		59ED5C78B246A7E2B8CC4ED1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		852D404F4E59786E2E3913E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97C765E4FDC4E1152A8CCF22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTechUITests/Pods-AirTechUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9CFDB0F287619187FE99EA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTechTests/Pods-AirTechTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDC05818E15568390B3DFFC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTechTests/Pods-AirTechTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30FB9493A175D32E782E0B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirTechUITests/Pods-AirTechUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83664C781E23380600CA2BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83664CB71E2338BE00CA2BC9 /* LoginViewController.m in Sources */,
+				835D01411E247F1E0053E40E /* PushViewController.m in Sources */,
+				83664CC41E233F1900CA2BC9 /* GuideCollectionViewCell.m in Sources */,
+				83664C841E23380600CA2BC9 /* AppDelegate.m in Sources */,
+				61D0EFD91E9C6E89002A00F7 /* LineViewController.m in Sources */,
+				83664D1F1E23718500CA2BC9 /* MianTabrViewController.m in Sources */,
+				83664D281E2393DE00CA2BC9 /* MeViewController.m in Sources */,
+				83664D0F1E235E4600CA2BC9 /* BorderButton.m in Sources */,
+				835D014E1E24B4D90053E40E /* CenterView.m in Sources */,
+				83664CBE1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m in Sources */,
+				83664C811E23380600CA2BC9 /* main.m in Sources */,
+				83664CB41E23386900CA2BC9 /* GuideViewController.m in Sources */,
+				61D0EEE11E9C20CD002A00F7 /* Model.xcdatamodeld in Sources */,
+				83664D221E237BA400CA2BC9 /* UIVerticalButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C911E23380600CA2BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83664C9A1E23380600CA2BC9 /* AirTechTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83664C9C1E23380600CA2BC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83664CA51E23380600CA2BC9 /* AirTechUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83664C971E23380600CA2BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83664C7B1E23380600CA2BC9 /* AirTech */;
+			targetProxy = 83664C961E23380600CA2BC9 /* PBXContainerItemProxy */;
+		};
+		83664CA21E23380600CA2BC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83664C7B1E23380600CA2BC9 /* AirTech */;
+			targetProxy = 83664CA11E23380600CA2BC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83664C8D1E23380600CA2BC9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83664C8E1E23380600CA2BC9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83664CA71E23380600CA2BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83664CA81E23380600CA2BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83664CAA1E23380600CA2BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E76725D4E168C7D641188508 /* Pods-AirTech.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9SXWYN294A;
+				INFOPLIST_FILE = GuideSKY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuwenjun1995;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		83664CAB1E23380600CA2BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B727C7FCE2B5EB55897E7A3D /* Pods-AirTech.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9SXWYN294A;
+				INFOPLIST_FILE = GuideSKY/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wuwenjun1995;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		83664CAD1E23380600CA2BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C87AAD9BC291778D01B6964 /* Pods-AirTechTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3PEAZ5DQY8;
+				INFOPLIST_FILE = GuideSKYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijiaanhao.GuideSKYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirTech.app/AirTech";
+			};
+			name = Debug;
+		};
+		83664CAE1E23380600CA2BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5DA76B19D5A92E37E789197 /* Pods-AirTechTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3PEAZ5DQY8;
+				INFOPLIST_FILE = GuideSKYTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijiaanhao.GuideSKYTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirTech.app/AirTech";
+			};
+			name = Release;
+		};
+		83664CB01E23380600CA2BC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90BF09E8AF2F1A2097025515 /* Pods-AirTechUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3PEAZ5DQY8;
+				INFOPLIST_FILE = GuideSKYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijiaanhao.GuideSKYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GuideSKY;
+			};
+			name = Debug;
+		};
+		83664CB11E23380600CA2BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F9B63B3B0A080186323562 /* Pods-AirTechUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3PEAZ5DQY8;
+				INFOPLIST_FILE = GuideSKYUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yijiaanhao.GuideSKYUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GuideSKY;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83664C771E23380600CA2BC9 /* Build configuration list for PBXProject "AirTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83664CA71E23380600CA2BC9 /* Debug */,
+				83664CA81E23380600CA2BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83664CA91E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83664CAA1E23380600CA2BC9 /* Debug */,
+				83664CAB1E23380600CA2BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83664CAC1E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83664CAD1E23380600CA2BC9 /* Debug */,
+				83664CAE1E23380600CA2BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83664CAF1E23380600CA2BC9 /* Build configuration list for PBXNativeTarget "AirTechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83664CB01E23380600CA2BC9 /* Debug */,
+				83664CB11E23380600CA2BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		61D0EEDF1E9C20CD002A00F7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61D0EEE01E9C20CD002A00F7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 61D0EEE01E9C20CD002A00F7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 83664C741E23380600CA2BC9 /* Project object */;
+}
