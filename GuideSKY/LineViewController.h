@@ -16,6 +16,10 @@
 @interface LineViewController : UIViewController <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *lineGraph;
 
+
+@property (strong, nonatomic) NSMutableArray *arrayOfValues;
+@property (strong, nonatomic) NSMutableArray *arrayOfDates;
+
 //@property (nonatomic) PNLineChart * lineChart;
 //@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
