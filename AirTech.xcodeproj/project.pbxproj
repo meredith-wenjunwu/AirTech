@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		25BD64D0A56C21C1FBE9B93D /* libPods-AirTechUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D091A517FAF6FF1AEEFEC0D9 /* libPods-AirTechUITests.a */; };
-		6186B07E1E9EBC03004996D7 /* Spirometry+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B07B1E9EBC03004996D7 /* Spirometry+CoreDataClass.m */; };
-		6186B07F1E9EBC03004996D7 /* Spirometry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B07D1E9EBC03004996D7 /* Spirometry+CoreDataProperties.m */; };
 		61D0EEE11E9C20CD002A00F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61D0EEDF1E9C20CD002A00F7 /* Model.xcdatamodeld */; };
 		61D0EEE41E9C4CB3002A00F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */; };
 		61D0EFD01E9C6B9F002A00F7 /* DataVisualization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */; };
@@ -61,10 +59,6 @@
 		0286B571643E6DD27071A99F /* libPods-AirTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C87AAD9BC291778D01B6964 /* Pods-AirTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirTechTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirTechTests/Pods-AirTechTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B123A29A55367E8F77AC9C8 /* libPods-AirTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6186B07A1E9EBC03004996D7 /* Spirometry+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Spirometry+CoreDataClass.h"; sourceTree = "<group>"; };
-		6186B07B1E9EBC03004996D7 /* Spirometry+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Spirometry+CoreDataClass.m"; sourceTree = "<group>"; };
-		6186B07C1E9EBC03004996D7 /* Spirometry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Spirometry+CoreDataProperties.h"; sourceTree = "<group>"; };
-		6186B07D1E9EBC03004996D7 /* Spirometry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Spirometry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		61D0EEE01E9C20CD002A00F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		61D0EEE51E9C4D00002A00F7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -183,10 +177,6 @@
 		83664C7E1E23380600CA2BC9 /* AirTech */ = {
 			isa = PBXGroup;
 			children = (
-				6186B07A1E9EBC03004996D7 /* Spirometry+CoreDataClass.h */,
-				6186B07B1E9EBC03004996D7 /* Spirometry+CoreDataClass.m */,
-				6186B07C1E9EBC03004996D7 /* Spirometry+CoreDataProperties.h */,
-				6186B07D1E9EBC03004996D7 /* Spirometry+CoreDataProperties.m */,
 				83664D101E23660300CA2BC9 /* base */,
 				83664D151E23668500CA2BC9 /* other */,
 				83664C7F1E23380600CA2BC9 /* Supporting Files */,
@@ -609,7 +599,6 @@
 				83664CB71E2338BE00CA2BC9 /* LoginViewController.m in Sources */,
 				835D01411E247F1E0053E40E /* PushViewController.m in Sources */,
 				83664CC41E233F1900CA2BC9 /* GuideCollectionViewCell.m in Sources */,
-				6186B07F1E9EBC03004996D7 /* Spirometry+CoreDataProperties.m in Sources */,
 				83664C841E23380600CA2BC9 /* AppDelegate.m in Sources */,
 				61D0EFD91E9C6E89002A00F7 /* LineViewController.m in Sources */,
 				83664D1F1E23718500CA2BC9 /* MianTabrViewController.m in Sources */,
@@ -617,7 +606,6 @@
 				83664D0F1E235E4600CA2BC9 /* BorderButton.m in Sources */,
 				835D014E1E24B4D90053E40E /* CenterView.m in Sources */,
 				83664CBE1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m in Sources */,
-				6186B07E1E9EBC03004996D7 /* Spirometry+CoreDataClass.m in Sources */,
 				83664C811E23380600CA2BC9 /* main.m in Sources */,
 				83664CB41E23386900CA2BC9 /* GuideViewController.m in Sources */,
 				61D0EEE11E9C20CD002A00F7 /* Model.xcdatamodeld in Sources */,
