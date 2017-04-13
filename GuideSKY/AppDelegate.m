@@ -25,7 +25,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds ]];
     
     [self.window makeKeyAndVisible];
-    [MagicalRecord setupCoreDataStack];
+    //[MagicalRecord setupCoreDataStack];
 
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"Guide"]!=YES)
     {
@@ -79,7 +79,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"CoredataSampleProject"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"AirTech"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
@@ -103,6 +103,8 @@
     return _persistentContainer;
 }
 
+
+
 #pragma mark - Core Data Saving support
 
 - (void)saveContext {
@@ -122,6 +124,7 @@
 - (NSURL *)applicationDocumentsDirectory{
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
 
 
 @end

@@ -7,8 +7,7 @@ target 'AirTech' do
 
   # Pods for AirTech
     pod 'BEMSimpleLineGraph'
-    pod 'MagicalRecord'
-    pod 'UICountingLabel'
+    pod 'JQFMDB'
     
 
 

@@ -9,7 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MagicalRecord.xcscheme</key>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JQFMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,11 +34,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UICountingLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -47,17 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>417EA9844EC286C5B1B8FCB029C00130</key>
+		<key>52E43EA763BF6A6FF24E814A01A398CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>836958902907F2574F355FDC81D6DBE7</key>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C83FC39720396A40656B4DDB38D90D8A</key>
+		<key>ACC4E01066A6793874A51F06FDB0CEA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

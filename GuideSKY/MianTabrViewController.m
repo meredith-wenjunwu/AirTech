@@ -55,7 +55,7 @@
 - (NSArray *)titlesArray
 {
     if (!_titlesArray) {
-        _titlesArray = @[@"Home",@"Export",@"History",@"Personal"];
+        _titlesArray = @[@"Home",@"Bluetooth",@"History",@"Personal"];
     }
     return _titlesArray;
 }

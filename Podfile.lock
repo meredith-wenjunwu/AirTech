@@ -1,20 +1,20 @@
 PODS:
   - BEMSimpleLineGraph (4.1)
-  - MagicalRecord (2.3.2):
-    - MagicalRecord/Core (= 2.3.2)
-  - MagicalRecord/Core (2.3.2)
-  - UICountingLabel (1.4.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - JQFMDB (1.1.5):
+    - FMDB
 
 DEPENDENCIES:
   - BEMSimpleLineGraph
-  - MagicalRecord
-  - UICountingLabel
+  - JQFMDB
 
 SPEC CHECKSUMS:
   BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
-  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  JQFMDB: 81bd56bb414f2cdc7de3861eec6482f8fa6c321c
 
-PODFILE CHECKSUM: 02bf526ea616a35883d7c8799ce5da81fe95f08e
+PODFILE CHECKSUM: b215598bc82aae11a27cb25bf948a69430e40437
 
 COCOAPODS: 1.2.0
