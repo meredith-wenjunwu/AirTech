@@ -6,8 +6,11 @@ target 'AirTech' do
   # use_frameworks!
 
   # Pods for AirTech
-    pod 'PNChart'
     pod 'BEMSimpleLineGraph'
+    pod 'MagicalRecord'
+    pod 'UICountingLabel'
+    
+
 
   target 'AirTechTests' do
     inherit! :search_paths

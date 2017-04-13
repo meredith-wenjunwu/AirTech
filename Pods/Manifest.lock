@@ -1,18 +1,20 @@
 PODS:
   - BEMSimpleLineGraph (4.1)
-  - PNChart (0.8.9):
-    - UICountingLabel (~> 1.2.0)
-  - UICountingLabel (1.2.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - UICountingLabel (1.4.0)
 
 DEPENDENCIES:
   - BEMSimpleLineGraph
-  - PNChart
+  - MagicalRecord
+  - UICountingLabel
 
 SPEC CHECKSUMS:
   BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
-  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
-  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
 
-PODFILE CHECKSUM: e3bf28d56731f7f0e1c89f914d5f373b8aa7b2a2
+PODFILE CHECKSUM: 02bf526ea616a35883d7c8799ce5da81fe95f08e
 
 COCOAPODS: 1.2.0

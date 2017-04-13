@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <MagicalRecord/MagicalRecord.h>
+
 @interface AppDelegate ()
 
 
@@ -23,7 +25,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds ]];
     
     [self.window makeKeyAndVisible];
-    
+    [MagicalRecord setupCoreDataStack];
+
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"Guide"]!=YES)
     {
         UIViewController  *vc =[[UIStoryboard storyboardWithName:@"Guide" bundle:nil] instantiateViewControllerWithIdentifier:@
