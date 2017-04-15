@@ -21,7 +21,7 @@
 }
 
 - (IBAction)save:(id)sender {
-    if ([_name.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_weight.text isEqualToString:@""] ||[_email.text isEqualToString:@""] || [_age.text isEqualToString:@""]) {
+    if ([_name.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_weight.text isEqualToString:@""] || [_height.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_age.text isEqualToString:@""]) {
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Ooooops"
                                      message:@"You must complete all fields!"
@@ -52,6 +52,11 @@
         float w = [saveWeight floatValue];
         [defaults setFloat:w forKey:@"Weight"];
         
+        //save height
+        NSString *saveHeight = _height.text;
+        NSInteger h = [saveHeight integerValue];
+        [defaults setInteger:h forKey:@"Height"];
+        
         //save age
         NSString *saveAge = _age.text;
         NSInteger a = [saveAge integerValue];
@@ -81,6 +86,11 @@
     NSString *weightS = [NSString stringWithFormat:@"%0.2f", loadWeight];
     [_weight setText:weightS];
     
+    //load height
+    NSInteger loadHeight = [defaults integerForKey:@"Height"];
+    NSString *heightS = [NSString stringWithFormat:@"%li", (long)loadHeight];
+    [_height setText:heightS];
+    
     //load age
     NSInteger loadAge = [defaults integerForKey:@"Age"];
     NSString *ageS = [NSString stringWithFormat:@"%li", (long)loadAge];
@@ -103,6 +113,7 @@
     _email.delegate = self;
     _weight.delegate = self;
     _age.delegate = self;
+    _height.delegate = self;
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"registered"]){
         [self load];

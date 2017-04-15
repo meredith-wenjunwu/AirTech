@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "AAChartView.h"
 #import "BEMSimpleLineGraphView.h"
+#import "Spirometry.h"
+#import "JQFMDB.h"
 
 
 
@@ -19,6 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *arrayOfValues;
 @property (strong, nonatomic) NSMutableArray *arrayOfDates;
 
+@property JQFMDB *db;
 //@property (nonatomic) PNLineChart * lineChart;
 //@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 

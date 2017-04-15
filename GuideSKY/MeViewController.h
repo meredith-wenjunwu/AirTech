@@ -11,7 +11,7 @@
 @interface MeViewController : UITableViewController <UITextFieldDelegate>
 
 
-- (IBAction)Change:(id)sender;
+- (IBAction)Change:(UIButton*)sender;
 
 //Keyboard Dismisses
 //- (IBAction)dismiss5:(id)sender;

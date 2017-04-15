@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *weight;
 @property (strong, nonatomic) IBOutlet UITextField *age;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *gender;
+@property (weak, nonatomic) IBOutlet UITextField *height;
 
 
 @end

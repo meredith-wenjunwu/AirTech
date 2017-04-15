@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *weight;
 @property (strong, nonatomic) IBOutlet UITextField *age;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *gender;
+@property (weak, nonatomic) IBOutlet UITextField *height;
 
 
 @end
@@ -28,10 +29,10 @@
     
 }
 
-- (IBAction)onClick:(id)sender {
-    [self.tabBarController dismissViewControllerAnimated:true completion:nil];
-    
-}
+//- (IBAction)onClick:(id)sender {
+//    [self.tabBarController dismissViewControllerAnimated:true completion:nil];
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +42,7 @@
     _email.delegate = self;
     _weight.delegate = self;
     _age.delegate = self;
+    _height.delegate = self;
     [self addDoneButton];
 }
 
@@ -73,6 +75,11 @@
     NSString *weightS = [NSString stringWithFormat:@"%0.2f", loadWeight];
     [_weight setText:weightS];
     
+    //load height
+    NSInteger loadHeight = [defaults integerForKey:@"Height"];
+    NSString *heightS = [NSString stringWithFormat:@"%li", (long)loadHeight];
+    [_height setText:heightS];
+    
     //load age
     NSInteger loadAge = [defaults integerForKey:@"Age"];
     NSString *ageS = [NSString stringWithFormat:@"%li", (long)loadAge];
@@ -98,8 +105,9 @@
 }
 */
 
-- (IBAction)Change:(id)sender {
-    if ([_name.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_weight.text isEqualToString:@""] ||[_email.text isEqualToString:@""] || [_age.text isEqualToString:@""]) {
+- (IBAction)Change:(UIButton *)sender {
+    NSLog(@"changed");
+    if ([_name.text isEqualToString:@""] || [_email.text isEqualToString:@""] || [_weight.text isEqualToString:@""] || [_height.text isEqualToString:@""] ||[_email.text isEqualToString:@""] || [_age.text isEqualToString:@""]) {
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Ooooops"
                                      message:@"You must complete all fields!"
@@ -130,6 +138,11 @@
         float w = [saveWeight floatValue];
         [defaults setFloat:w forKey:@"Weight"];
         
+        //save height
+        NSString *saveHeight = _height.text;
+        NSInteger h = [saveHeight integerValue];
+        [defaults setInteger:h forKey:@"Height"];
+        
         //save age
         NSString *saveAge = _age.text;
         NSInteger a = [saveAge integerValue];
@@ -138,6 +151,21 @@
         //save gender
         NSInteger G = _gender.selectedSegmentIndex;
         [defaults setInteger:G forKey:@"Gender"];
+        
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Success"
+                                     message:@"New User Information Saved"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
         
     }
     

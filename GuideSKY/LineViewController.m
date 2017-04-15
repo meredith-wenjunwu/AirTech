@@ -7,7 +7,7 @@
 //
 
 #import "LineViewController.h"
-#import "Spirometry+add.h"
+
 
 @interface LineViewController () {
     int totalNumber;
@@ -28,6 +28,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     _lineGraph.delegate = self;
     _lineGraph.dataSource = self;
+    //创建数据库
+    self.db = [JQFMDB shareDatabase];
+    [self.db jq_createTable:@"spirometryTable" dicOrModel:[Spirometry class]];
+   [self.db lastInsertPrimaryKeyId:@"spirometryTable"];
+
+
     [self hydrateDatasets];
     
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
@@ -100,7 +106,14 @@
         totalNumber = totalNumber + [[self.arrayOfValues objectAtIndex:i] intValue]; // All of the values added together
         
     }
-    [Spirometry addValuestoDatabase:_arrayOfValues dateValue:[self.arrayOfDates objectAtIndex:1] fvcValue:0.0 fev1Value:0.0];
+//    [Spirometry addValuestoDatabase:_arrayOfValues dateValue:[self.arrayOfDates objectAtIndex:1] fvcValue:0.0 fev1Value:0.0];
+    Spirometry *spirometry = [[Spirometry alloc]init];
+    spirometry.values = self.arrayOfValues;
+    spirometry.date = [self.arrayOfDates objectAtIndex:1];
+    spirometry.FEV1 = 0.0;
+    spirometry.FVC = 0.0;
+    [self.db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
+    
 }
 
 #pragma mark - SimpleLineGraph Data Source

@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface PushViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *testType;
+- (IBAction)changedTestType:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *spirometryParam;
+@property (weak, nonatomic) IBOutlet UIStepper *graphObjectIncrement;
+@property (weak, nonatomic) IBOutlet UITextField *numOfObject;
 
 @end
