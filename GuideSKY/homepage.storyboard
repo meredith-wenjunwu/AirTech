@@ -27,13 +27,14 @@
         <!--Home Page-->
         <scene sceneID="IDN-NT-duW">
             <objects>
-                <tableViewController title="Stats" id="ZPZ-x1-8tw" userLabel="Home Page" customClass="StatsViewController" sceneMemberID="viewController">
+                <tableViewController title="Stats" id="ZPZ-x1-8tw" userLabel="Home Page" customClass="HomeViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="z7d-MK-fkX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96847166683699903" green="1" blue="0.6859006001119885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.9475471804609481" blue="0.49142386844541297" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Gas Analysis" footerTitle="* percentage comparing with historical average" id="PZA-Cq-SgT">
+                            <tableViewSection headerTitle="Gas Analysis" footerTitle="* last test comparing with historical average" id="PZA-Cq-SgT">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gB1-ep-gtd" detailTextLabel="Cfa-be-3KC" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="tMq-jd-UEF">
                                         <rect key="frame" x="0.0" y="56" width="375" height="55"/>
@@ -64,11 +65,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Spirometry" footerTitle="* percentage comparing with historical average" id="cc7-Q9-AHb">
+                            <tableViewSection headerTitle="Spirometry" footerTitle="* last test comparing with historical average" id="cc7-Q9-AHb">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="oME-Nm-bDf" detailTextLabel="aQ6-0d-nSj" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="hcl-S7-FIl">
                                         <rect key="frame" x="0.0" y="187" width="375" height="55"/>
@@ -100,6 +102,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="MMN-JS-d7F" detailTextLabel="yrD-IP-TIx" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="xzP-f2-Qhp">
                                         <rect key="frame" x="0.0" y="242" width="375" height="55"/>
@@ -131,6 +134,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="MsG-n8-hd6" detailTextLabel="wX1-vi-BXI" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="xo8-RU-wbN">
                                         <rect key="frame" x="0.0" y="297" width="375" height="55"/>
@@ -162,6 +166,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -175,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fR-VC-IdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="176"/>
+            <point key="canvasLocation" x="204" y="176"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25BD64D0A56C21C1FBE9B93D /* libPods-AirTechUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D091A517FAF6FF1AEEFEC0D9 /* libPods-AirTechUITests.a */; };
 		61400C031EA1F64200F2AD6A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C021EA1F64200F2AD6A /* StatsViewController.m */; };
+		61400C061EA2000700F2AD6A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C051EA2000700F2AD6A /* HomeViewController.m */; };
 		6186B09F1EA1C16A004996D7 /* Spirometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B09E1EA1C16A004996D7 /* Spirometry.m */; };
 		6186B0A21EA1C3D0004996D7 /* Gas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A11EA1C3D0004996D7 /* Gas.m */; };
 		6186B0A71EA1CA2A004996D7 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A51EA1CA2A004996D7 /* BLE.m */; };
@@ -65,6 +66,8 @@
 		1B123A29A55367E8F77AC9C8 /* libPods-AirTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61400C011EA1F64200F2AD6A /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		61400C021EA1F64200F2AD6A /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		61400C041EA1FFEF00F2AD6A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		61400C051EA2000700F2AD6A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6186B0991EA1C0E8004996D7 /* Spirometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spirometry.h; sourceTree = "<group>"; };
 		6186B09E1EA1C16A004996D7 /* Spirometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spirometry.m; sourceTree = "<group>"; };
 		6186B0A01EA1C3BB004996D7 /* Gas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gas.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 			children = (
 				61400C011EA1F64200F2AD6A /* StatsViewController.h */,
 				61400C021EA1F64200F2AD6A /* StatsViewController.m */,
+				61400C041EA1FFEF00F2AD6A /* HomeViewController.h */,
+				61400C051EA2000700F2AD6A /* HomeViewController.m */,
 				6186B0A81EA1CA81004996D7 /* BluetoothViewController.h */,
 				6186B0A91EA1CA81004996D7 /* BluetoothViewController.m */,
 				61D0EFD71E9C6E89002A00F7 /* LineViewController.h */,
@@ -645,6 +650,7 @@
 				83664CB41E23386900CA2BC9 /* GuideViewController.m in Sources */,
 				83664D221E237BA400CA2BC9 /* UIVerticalButton.m in Sources */,
 				6186B0AA1EA1CA81004996D7 /* BluetoothViewController.m in Sources */,
+				61400C061EA2000700F2AD6A /* HomeViewController.m in Sources */,
 				6186B09F1EA1C16A004996D7 /* Spirometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

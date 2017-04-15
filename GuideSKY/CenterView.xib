@@ -18,9 +18,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-nm-grq" customClass="BorderButton">
-                            <rect key="frame" x="134" y="110" width="100" height="44"/>
+                            <rect key="frame" x="113" y="110" width="150" height="44"/>
+                            <color key="backgroundColor" red="1" green="0.4679887812875454" blue="0.769715977412189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="Lag-Dn-xU8"/>
+                                <constraint firstAttribute="width" constant="150" id="Lag-Dn-xU8"/>
                                 <constraint firstAttribute="height" constant="44" id="vXN-oY-LAt"/>
                             </constraints>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -44,6 +45,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-wb-IeA" customClass="BorderButton">
                             <rect key="frame" x="113" y="274" width="150" height="44"/>
+                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="qiC-Ef-e3l"/>
                                 <constraint firstAttribute="width" constant="150" id="vdd-L1-QkZ"/>
@@ -64,44 +66,47 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-W8-Zuh" customClass="BorderButton">
+                            <rect key="frame" x="128" y="463" width="120" height="44"/>
+                            <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="CMI-WN-BoL"/>
+                                <constraint firstAttribute="width" constant="120" id="Exs-O3-FxB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="KbC-gu-XsN"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.77174954341547108" blue="0.95232720468660548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="EWr-8L-iQq"/>
+                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerY" secondItem="9A5-dn-Y77" secondAttribute="centerY" constant="151.5" id="I3e-ZB-Mnh"/>
                         <constraint firstItem="SdX-wb-IeA" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="JbF-Nl-AOl"/>
+                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="top" secondItem="SdX-wb-IeA" secondAttribute="bottom" constant="145" id="ODt-0a-9hI"/>
                         <constraint firstItem="SdX-wb-IeA" firstAttribute="top" secondItem="8Gm-nm-grq" secondAttribute="bottom" constant="120" id="uL0-Pv-5VT"/>
-                        <constraint firstItem="8Gm-nm-grq" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" constant="-3.5" id="w6B-cX-Uq0"/>
+                        <constraint firstItem="8Gm-nm-grq" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="w6B-cX-Uq0"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-W8-Zuh" customClass="BorderButton">
-                    <rect key="frame" x="147" y="462" width="80" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="CMI-WN-BoL"/>
-                        <constraint firstAttribute="width" constant="80" id="Exs-O3-FxB"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="Cancel"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="15"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="onclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="KbC-gu-XsN"/>
-                    </connections>
-                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="9A5-dn-Y77" secondAttribute="bottom" id="2OC-pg-zb5"/>
-                <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8en-Y6-kwq"/>
-                <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="150" id="Dyr-EJ-6D6"/>
                 <constraint firstItem="9A5-dn-Y77" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TpP-eS-MTH"/>
-                <constraint firstItem="vw6-W8-Zuh" firstAttribute="top" secondItem="SdX-wb-IeA" secondAttribute="bottom" constant="143.5" id="V4x-YV-2MC"/>
                 <constraint firstItem="9A5-dn-Y77" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gQU-x6-fcY"/>
                 <constraint firstAttribute="trailing" secondItem="9A5-dn-Y77" secondAttribute="trailing" id="yqs-Z6-EzD"/>
             </constraints>

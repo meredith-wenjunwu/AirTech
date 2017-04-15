@@ -6,8 +6,8 @@
 //  Copyright © 2017 Georgia Tech. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "StatsViewController.h"
 
-@implementation HomeViewController
+@implementation StatsViewController
 
 @end
