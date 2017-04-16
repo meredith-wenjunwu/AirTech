@@ -17,19 +17,20 @@
 @end
 
 @implementation BluetoothViewController
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     tableData = [NSMutableArray array];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.showsVerticalScrollIndicator = NO;
     
     
     bleShield = [[BLE alloc] init];
     [bleShield controlSetup];
     bleShield.delegate = self;
+    [self.btnDisconnect setEnabled: NO];
+    [self.btnDisconnect setHidden:YES];
     
     
 }
@@ -42,8 +43,9 @@
     }
     else
     {
-        [activityIndicator stopAnimating];
+        [_activityIndicator stopAnimating];
     }
+    [_btnConnect setEnabled:YES];
 }
 
 - (IBAction)BLEShieldScan:(id)sender
@@ -62,8 +64,9 @@
     
     [NSTimer scheduledTimerWithTimeInterval:(float)3.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
     
-    [activityIndicator startAnimating];
-    self.navigationItem.leftBarButtonItem.enabled = NO;
+    [_activityIndicator startAnimating];
+    [_btnConnect setEnabled:NO];
+
 }
 
 -(void) bleDidReceiveData:(unsigned char *)data length:(int)length
@@ -71,16 +74,48 @@
     NSData *d = [NSData dataWithBytes:data length:length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
     NSLog(@"%@", s);
-//    NSNumber *form = [NSNumber numberWithBool:YES];
+    double v = [s doubleValue];
+    [tableData addObject:@(v)];
     
-//    [tableData addObject:dict];
-    
-    [_tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
-    [_tableView reloadData];
+}
+
+NSTimer *rssiTimer;
+
+-(void) readRSSITimer:(NSTimer *)timer
+{
+    [bleShield readRSSI];
 }
 
 
 
+- (void) bleDidDisconnect
+{
+    NSLog(@"bleDidDisconnect");
+    
+    [_btnConnect setEnabled:YES];
+    [_btnDisconnect setEnabled:NO];
+    [_btnDisconnect setHidden:YES];
+    [_activityIndicator stopAnimating];
+    
+}
 
+-(void) bleDidConnect
+{
+    
+    NSLog(@"bleDidConnect");
+    NSString *s = @"1";
+    NSData *d;
+    
+    d = [s dataUsingEncoding:NSUTF8StringEncoding];
+    if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+        [bleShield write:d];
+        }
+    [_activityIndicator stopAnimating];
+    [_btnConnect setEnabled:NO];
+    [_btnConnect setHidden:YES];
+    [_btnDisconnect setHidden:NO];
+    [_btnDisconnect setEnabled:YES];
+
+}
 
 @end

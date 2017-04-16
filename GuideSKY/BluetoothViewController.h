@@ -12,12 +12,10 @@
 @interface BluetoothViewController: UIViewController <BLEDelegate>
 {
     BLE *bleShield;
-    UIActivityIndicatorView *activityIndicator;
     
 }
-@property (strong, nonatomic) IBOutlet UITableView *table;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *btnConnect;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *btnDisconnect;
 
 @end

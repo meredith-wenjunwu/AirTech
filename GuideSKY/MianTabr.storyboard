@@ -55,6 +55,9 @@
                                 <state key="normal" title="Connect">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="BLEShieldScan:" destination="gN7-5y-Boo" eventType="touchUpInside" id="zS4-kT-EqG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d75-gz-jif">
                                 <rect key="frame" x="47" y="406" width="280" height="36"/>
@@ -67,6 +70,7 @@
                                 </state>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HaL-Ma-YcE" firstAttribute="top" secondItem="d75-gz-jif" secondAttribute="bottom" constant="33" id="2fk-Wc-mbo"/>
                             <constraint firstItem="d75-gz-jif" firstAttribute="centerX" secondItem="Jey-X8-rdX" secondAttribute="centerX" id="3sj-0x-pQc"/>
@@ -81,9 +85,9 @@
                     <navigationItem key="navigationItem" title="Bluetooth Connection" id="qJj-CF-emh" userLabel="Bluetooth Connection"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="activity" destination="HaL-Ma-YcE" id="HSh-Gl-GS7"/>
-                        <outlet property="activityScanning" destination="HaL-Ma-YcE" id="xQu-nc-PMr"/>
+                        <outlet property="activityIndicator" destination="HaL-Ma-YcE" id="ZeE-WE-xzh"/>
                         <outlet property="btnConnect" destination="gwn-Hn-3vQ" id="T3I-QF-XAk"/>
+                        <outlet property="btnDisconnect" destination="d75-gz-jif" id="Mtx-2t-ARi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eH-mr-Np7" userLabel="First Responder" sceneMemberID="firstResponder"/>
