@@ -34,7 +34,7 @@
                         <color key="backgroundColor" red="0.96847166683699903" green="1" blue="0.6859006001119885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.9475471804609481" blue="0.49142386844541297" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Gas Analysis" footerTitle="* last test comparing with historical average" id="PZA-Cq-SgT">
+                            <tableViewSection headerTitle="Gas Analysis                                                 Predicted" footerTitle="* last test comparing with predicted value" id="PZA-Cq-SgT">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gB1-ep-gtd" detailTextLabel="Cfa-be-3KC" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="tMq-jd-UEF">
                                         <rect key="frame" x="0.0" y="56" width="375" height="55"/>

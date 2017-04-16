@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="676" y="-42"/>
         </scene>
-        <!--发现-->
+        <!--Bluetooth-->
         <scene sceneID="jPD-Yo-6X7">
             <objects>
-                <viewController id="gN7-5y-Boo" customClass="BluetoothViewController" sceneMemberID="viewController">
+                <viewController id="gN7-5y-Boo" userLabel="Bluetooth" customClass="BluetoothViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2OZ-wW-TPU"/>
                         <viewControllerLayoutGuide type="bottom" id="5uO-Za-Ujs"/>
@@ -39,13 +39,56 @@
                     <view key="view" contentMode="scaleToFill" id="Jey-X8-rdX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.3132324219" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-Ma-YcE">
+                                <rect key="frame" x="177" y="475" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="4mm-wf-5YB"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-Hn-3vQ">
+                                <rect key="frame" x="47" y="502" width="280" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="21z-ff-XlZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d75-gz-jif">
+                                <rect key="frame" x="47" y="406" width="280" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="qPJ-9x-gFz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HaL-Ma-YcE" firstAttribute="top" secondItem="d75-gz-jif" secondAttribute="bottom" constant="33" id="2fk-Wc-mbo"/>
+                            <constraint firstItem="d75-gz-jif" firstAttribute="centerX" secondItem="Jey-X8-rdX" secondAttribute="centerX" id="3sj-0x-pQc"/>
+                            <constraint firstItem="gwn-Hn-3vQ" firstAttribute="top" secondItem="HaL-Ma-YcE" secondAttribute="bottom" constant="7" id="52N-q8-AAZ"/>
+                            <constraint firstItem="HaL-Ma-YcE" firstAttribute="centerX" secondItem="Jey-X8-rdX" secondAttribute="centerX" id="SLS-Af-rcV"/>
+                            <constraint firstItem="gwn-Hn-3vQ" firstAttribute="centerX" secondItem="Jey-X8-rdX" secondAttribute="centerX" id="X2b-B3-cxG"/>
+                            <constraint firstItem="5uO-Za-Ujs" firstAttribute="top" secondItem="gwn-Hn-3vQ" secondAttribute="bottom" constant="85" id="wYD-ya-8qc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="发现" image="tabbar_mine_selected" id="oYC-RC-Mgd"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Bluetooth Connection" id="qJj-CF-emh" userLabel="Bluetooth Connection"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activity" destination="HaL-Ma-YcE" id="HSh-Gl-GS7"/>
+                        <outlet property="activityScanning" destination="HaL-Ma-YcE" id="xQu-nc-PMr"/>
+                        <outlet property="btnConnect" destination="gwn-Hn-3vQ" id="T3I-QF-XAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eH-mr-Np7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-289" y="341"/>
+            <point key="canvasLocation" x="-290.39999999999998" y="340.47976011994007"/>
         </scene>
         <!--Mian Tabr View Controller-->
         <scene sceneID="cjW-o0-eik">
