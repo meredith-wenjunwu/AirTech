@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "BLE.h"
+#include "AppDelegate.h"
+#include "Global.h"
+
 
 @interface BluetoothViewController: UIViewController <BLEDelegate>
-{
-    BLE *bleShield;
     
-}
+@property BLE *bleShield;
+@property NSMutableArray *tableData;
+    
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *btnConnect;
 @property (weak, nonatomic) IBOutlet UIButton *btnDisconnect;

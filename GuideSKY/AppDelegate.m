@@ -16,6 +16,7 @@
 
 @implementation AppDelegate
 
+@synthesize bleShield = _bleShield;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentContainer = _persistentContainer;
@@ -25,14 +26,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen]bounds ]];
     
     [self.window makeKeyAndVisible];
-    //[MagicalRecord setupCoreDataStack];
-
+    _bleShield = [[BLE alloc] init];
+    [_bleShield controlSetup];
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"Guide"]!=YES)
     {
+        JQFMDB *db = [JQFMDB shareDatabase:@"All"];
+        [db jq_createTable:@"spirometryTable" dicOrModel:[Spirometry class]];        
+        [db jq_createTable:@"gasTable" dicOrModel:[Gas class]];
+        
         UIViewController  *vc =[[UIStoryboard storyboardWithName:@"Guide" bundle:nil] instantiateViewControllerWithIdentifier:@
                                 "Guide"];
         self.window.rootViewController = vc;
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Guide"];
+        
     }
     
     else {

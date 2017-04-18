@@ -10,9 +10,11 @@
 
 @interface Gas : NSObject
 
-@property (nonatomic, strong)NSArray *values;
+@property (nonatomic, strong)NSMutableArray *values;
 @property (nonatomic, strong)NSDate *date;
 @property (nonatomic, strong)Gas *gas;
+@property (nonatomic, assign)double max;
+
 
 
 @end

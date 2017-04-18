@@ -97,6 +97,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRN-xs-FxA" userLabel="PEF">
+                                <rect key="frame" x="46" y="405" width="35" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PEF" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAA-Dr-ZqF" userLabel="Pef Text">
+                                <rect key="frame" x="253" y="403" width="83" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,18 +119,31 @@
                             <constraint firstItem="DPF-k3-gvs" firstAttribute="centerY" secondItem="uI9-Au-RBS" secondAttribute="centerY" id="8KK-Ch-aoF"/>
                             <constraint firstItem="AA1-hn-uTz" firstAttribute="centerX" secondItem="jr7-u6-XYh" secondAttribute="centerX" id="8ZK-B7-svu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DPF-k3-gvs" secondAttribute="trailing" constant="19" id="Coy-n1-FtM"/>
+                            <constraint firstItem="GpW-cr-grx" firstAttribute="top" secondItem="mAA-Dr-ZqF" secondAttribute="bottom" constant="18" id="HKQ-8V-UzT"/>
                             <constraint firstItem="DPF-k3-gvs" firstAttribute="centerX" secondItem="c1x-Sx-9Ze" secondAttribute="centerX" id="IHB-95-95d"/>
                             <constraint firstItem="mgK-i4-d76" firstAttribute="leading" secondItem="jr7-u6-XYh" secondAttribute="leadingMargin" constant="30" id="QS7-fB-7wa"/>
                             <constraint firstItem="uI9-Au-RBS" firstAttribute="leading" secondItem="jr7-u6-XYh" secondAttribute="leadingMargin" constant="27" id="V0i-jI-xSR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mAA-Dr-ZqF" secondAttribute="trailing" constant="23" id="Zux-Ep-WtU"/>
+                            <constraint firstItem="cRN-xs-FxA" firstAttribute="leading" secondItem="jr7-u6-XYh" secondAttribute="leadingMargin" constant="30" id="aLN-0W-zsJ"/>
                             <constraint firstItem="GpW-cr-grx" firstAttribute="centerY" secondItem="9Y7-kg-uCm" secondAttribute="centerY" id="bb7-71-PUH"/>
                             <constraint firstItem="22w-2l-cnq" firstAttribute="top" secondItem="AA1-hn-uTz" secondAttribute="bottom" constant="35" id="dmv-hE-iK7"/>
+                            <constraint firstItem="9Y7-kg-uCm" firstAttribute="top" secondItem="cRN-xs-FxA" secondAttribute="bottom" constant="25" id="h45-aS-d33"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GpW-cr-grx" secondAttribute="trailing" constant="23" id="j7B-1d-byq"/>
+                            <constraint firstItem="mAA-Dr-ZqF" firstAttribute="centerY" secondItem="cRN-xs-FxA" secondAttribute="centerY" id="jwx-zD-E7l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c1x-Sx-9Ze" secondAttribute="trailing" constant="19" id="msp-oQ-B7o"/>
                             <constraint firstItem="mgK-i4-d76" firstAttribute="top" secondItem="9Y7-kg-uCm" secondAttribute="bottom" constant="25" id="sUI-ba-7gz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fev1Text" destination="c1x-Sx-9Ze" id="1ok-cG-GqP"/>
+                        <outlet property="fev1Title" destination="mgK-i4-d76" id="rqg-Os-wfp"/>
+                        <outlet property="fevfvcText" destination="DPF-k3-gvs" id="pNJ-bv-Utd"/>
+                        <outlet property="fevfvcTitle" destination="uI9-Au-RBS" id="sHC-Wd-JpH"/>
+                        <outlet property="fvcText" destination="GpW-cr-grx" id="OaQ-gy-Z8X"/>
+                        <outlet property="fvcTitle" destination="9Y7-kg-uCm" id="FJv-JG-uMX"/>
                         <outlet property="lineGraph" destination="DIp-Zt-IFj" id="u5E-Za-ZEN"/>
+                        <outlet property="pefText" destination="mAA-Dr-ZqF" id="WW8-eJ-FPy"/>
+                        <outlet property="pefTitle" destination="cRN-xs-FxA" id="33F-le-lSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndm-Lh-pOy" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,34 +7,57 @@
 //
 
 #import "LineViewController.h"
+#import "MianTabrViewController.h"
 
 
 @interface LineViewController () {
     int totalNumber;
+    AppDelegate *appdelegate;
+    JQFMDB *db;
+    int hz;
 } @end
 
-@implementation LineViewController 
-
-
+@implementation LineViewController
+@synthesize isSpirometry;
+@synthesize tableData;
 
 - (IBAction)back:(id)sender {
-    
+    [self.arrayOfValues removeAllObjects];
     [self dismissViewControllerAnimated:NO completion:nil];
-
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isSpirometry = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
+    //isSpirometry = YES;
     // Do any additional setup after loading the view, typically from a nib.
     _lineGraph.delegate = self;
     _lineGraph.dataSource = self;
-    //创建数据库
-    self.db = [JQFMDB shareDatabase];
-    [self.db jq_createTable:@"spirometryTable" dicOrModel:[Spirometry class]];
-   [self.db lastInsertPrimaryKeyId:@"spirometryTable"];
-
-
-    [self hydrateDatasets];
+    db = [JQFMDB shareDatabase:@"All"];
+    if (isSpirometry) {
+        // frequency of pressure sensor
+        hz = 20;
+    } else {
+        hz = 2;
+        [self.pefText setHidden:YES];
+        [self.pefTitle setHidden:YES];
+        [self.fvcText setHidden:YES];
+        [self.fvcTitle setHidden:YES];
+        [self.fev1Text setHidden:YES];
+        [self.fev1Title setHidden:YES];
+        [self.fevfvcText setHidden:YES];
+        [self.fevfvcTitle setHidden:YES];
+    }
+    if (![db jq_isExistTable:@"spirometryTable"]) {
+        NSLog(@"No Spirometry Table!");
+    }
+    
+    if (isSpirometry) {
+        [self spirometryDatasets];
+    } else {
+        [self gasDatasets];
+    }
     
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     size_t num_locations = 2;
@@ -55,7 +78,7 @@
     self.lineGraph.enableReferenceXAxisLines = YES;
     self.lineGraph.enableReferenceYAxisLines = YES;
     self.lineGraph.enableReferenceAxisFrame = YES;
-
+    
     // Draw an average line
     self.lineGraph.averageLine.enableAverageLine = YES;
     self.lineGraph.averageLine.alpha = 0.6;
@@ -77,44 +100,115 @@
     
 }
 
-#pragma mark - generate data
 
-- (void)hydrateDatasets {
+#pragma mark - generate data for spirometry
+
+- (void)spirometryDatasets {
     // Reset the arrays of values (Y-Axis points) and dates (X-Axis points / labels)
+    self.arrayOfValues = [Global array];
     if (!self.arrayOfValues) self.arrayOfValues = [[NSMutableArray alloc] init];
     if (!self.arrayOfDates) self.arrayOfDates = [[NSMutableArray alloc] init];
-    [self.arrayOfValues removeAllObjects];
     [self.arrayOfDates removeAllObjects];
     
-    totalNumber = 0;
-    NSDate *baseDate = [NSDate date];
-    BOOL showNullValue = true;
-    
+    //    totalNumber = 0;
+    //    NSDate *baseDate = [NSDate date];
+    //    BOOL showNullValue = true;
     // Add objects to the array based on the stepper value
-    for (int i = 0; i < 9; i++) {
-        [self.arrayOfValues addObject:@([self getRandomFloat])]; // Random values for the graph
-        if (i == 0) {
-            [self.arrayOfDates addObject:baseDate]; // Dates for the X-Axis of the graph
-        } else if (showNullValue && i == 4) {
-            [self.arrayOfDates addObject:[self dateForGraphAfterDate:self.arrayOfDates[i-1]]]; // Dates for the X-Axis of the graph
-            self.arrayOfValues[i] = @(BEMNullGraphValue);
-        } else {
-            [self.arrayOfDates addObject:[self dateForGraphAfterDate:self.arrayOfDates[i-1]]]; // Dates for the X-Axis of the graph
+    
+    
+    float a[121], b[121], c[121];
+    
+    float max = -1;
+    for (int i = 0; i < 121; i++) {
+        float f = [self.arrayOfValues[i] floatValue];
+        a[i] = f;
+        b[i] = 0.05;
+        if (f > max) {
+            max = f;
         }
         
-        
-        totalNumber = totalNumber + [[self.arrayOfValues objectAtIndex:i] intValue]; // All of the values added together
+        [self.arrayOfDates addObject:@(i)];
         
     }
-//    [Spirometry addValuestoDatabase:_arrayOfValues dateValue:[self.arrayOfDates objectAtIndex:1] fvcValue:0.0 fev1Value:0.0];
+    //trapzoidal integral
+    vDSP_vtrapz(a, 1, b, c, 1, 121);
+    
+    //need to comment out later
+    [db jq_deleteAllDataFromTable:@"spirometryTable"];
+    
+    double PEF = (double) max;
+    
+    NSDate *now = [NSDate date];
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: now];
+    
+    
+#pragma initiate Spirometry result and store it in database
     Spirometry *spirometry = [[Spirometry alloc]init];
     spirometry.values = self.arrayOfValues;
-    spirometry.date = [self.arrayOfDates objectAtIndex:1];
-    spirometry.FEV1 = 0.0;
-    spirometry.FVC = 0.0;
-    [self.db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
+    spirometry.date = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+    spirometry.FEV1 = (double) c[20];
+    spirometry.FVC = (double) c[120];
+    spirometry.PEF = PEF;
+    [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", c[120]]];
+    [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", c[20]]];
+    [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (c[20]/c[120])]];
+    [self.pefText setText:[NSString stringWithFormat:@"%0.2f", PEF]];
+    
+    //[db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
+    NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
+    NSLog(@"表中所有数据:%@", spiroArr);
     
 }
+
+#pragma mark - generate data for gas analysis
+- (void)gasDatasets {
+    self.arrayOfValues = [Global array];
+    if (!self.arrayOfValues) self.arrayOfValues = [[NSMutableArray alloc] init];
+    if (!self.arrayOfDates) self.arrayOfDates = [[NSMutableArray alloc] init];
+    [self.arrayOfDates removeAllObjects];
+    
+    float max = -1;
+    for (int i = 0; i < (6*hz + 1); i++) {
+        float f = [self.arrayOfValues[i] floatValue];
+        if (f > max) {
+            max = f;
+        }
+        
+        [self.arrayOfDates addObject:@(i)];
+    }
+    
+    //need to comment out later
+    //[db jq_deleteAllDataFromTable:@"spirometryTable"];
+    
+    double PEF = (double) max;
+    
+    NSDate *now = [NSDate date];
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: now];
+    
+    
+#pragma initiate Spirometry result and store it in database
+    Gas *gas = [[Gas alloc]init];
+    gas.values = self.arrayOfValues;
+    gas.date = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+    gas.max = PEF;
+    
+    
+    [_fvcTitle setText:@"Carbon Dioxide (%)"];
+    [_fvcText setText:[NSString stringWithFormat:@"%0.2f %%", PEF]];
+    [_fvcTitle setHidden:NO];
+    [_fvcText setHidden:NO];
+
+    
+    [db jq_insertTable:@"gasTable" dicOrModel:gas];
+    
+    NSArray *gasArr = [db jq_lookupTable:@"gasTable" dicOrModel:[Gas class] whereFormat:nil];
+    NSLog(@"表中所有数据:%@", gasArr);
+}
+
+
+
 
 #pragma mark - SimpleLineGraph Data Source
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
@@ -128,7 +222,10 @@
 #pragma mark - SimpleLineGraph Delegate
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
-    return 2;
+    if (isSpirometry)
+        return 20;
+    else
+        return 2;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
@@ -143,12 +240,12 @@
 
 - (void)lineGraph:(BEMSimpleLineGraphView *)graph didReleaseTouchFromGraphWithClosestIndex:(CGFloat)index {
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-//        self.labelValues.alpha = 0.0;
+        //        self.labelValues.alpha = 0.0;
     } completion:^(BOOL finished) {
-//        self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.lineGraph calculatePointValueSum] intValue]];
+        //        self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.lineGraph calculatePointValueSum] intValue]];
         
         [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-//            self.labelValues.alpha = 1.0;
+            //            self.labelValues.alpha = 1.0;
         } completion:nil];
     }];
 }
@@ -163,15 +260,10 @@
 }
 
 
-- (float)getRandomFloat {
-    float i1 = (float)(arc4random() % 1000000) / 100 ;
-    return i1;
-}
+
 - (NSString *)labelForDateAtIndex:(NSInteger)index {
-    NSDate *date = self.arrayOfDates[index];
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    df.dateFormat = @"MM/dd";
-    NSString *label = [df stringFromDate:date];
+    int time = [self.arrayOfDates[index] intValue];
+    NSString *label = [NSString stringWithFormat:@"%i", time];
     return label;
 }
 
@@ -180,5 +272,6 @@
     NSDate *newDate = [date dateByAddingTimeInterval:secondsInTwentyFourHours];
     return newDate;
 }
+
 
 @end

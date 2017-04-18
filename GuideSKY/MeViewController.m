@@ -16,7 +16,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *age;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *gender;
 @property (weak, nonatomic) IBOutlet UITextField *height;
-
+@property NSDictionary *tree;
+@property JQFMDB *db;
+- (void)readJSON;
+- (int)getAgeIndex;
 
 @end
 
@@ -31,7 +34,7 @@
 
 //- (IBAction)onClick:(id)sender {
 //    [self.tabBarController dismissViewControllerAnimated:true completion:nil];
-//    
+//
 //}
 
 - (void)viewDidLoad {
@@ -96,14 +99,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)Change:(UIButton *)sender {
     NSLog(@"changed");
@@ -124,6 +127,7 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     } else {
+        _db = [JQFMDB shareDatabase:@"All"];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         //save name
         NSString *saveName = _name.text;
@@ -152,6 +156,23 @@
         NSInteger G = _gender.selectedSegmentIndex;
         [defaults setInteger:G forKey:@"Gender"];
         
+         [self readJSON];
+        // retrieve user predicted value
+        int ageIndex = [self getAgeIndex];
+        NSString *k = [NSString stringWithFormat:@"%i", ageIndex];
+        NSDictionary *currentNode = [self.tree objectForKey:k];
+        NSString *heightK = [self getHeightKey:(int)h];
+        NSDictionary *currentArray = [currentNode objectForKey:heightK];
+        
+//        if (![_db jq_isExistTable:@"predictedValue"]) {
+//            NSLog(@"No predicted value!");
+//            //[_db jq_createTable:@"predictedValue" dicOrModel:[NSDictionary class]];
+//        }
+        
+        [_db jq_deleteAllDataFromTable:@"predictedValue"];
+        [_db jq_insertTable:@"predictedValue" dicOrModel:currentArray];
+        
+        // Alert
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Success"
                                      message:@"New User Information Saved"
@@ -168,6 +189,50 @@
         [self presentViewController:alert animated:YES completion:nil];
         
     }
+}
+
+- (void) readJSON{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int G = (int)[defaults integerForKey:@"Gender"];
+    NSString *filePath;
+    if (G == 0) {
+        filePath = [[NSBundle mainBundle] pathForResource:@"female" ofType:@"json"];
+    } else {
+        filePath = [[NSBundle mainBundle] pathForResource:@"male" ofType:@"json"];
+    }
+    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    if (!myJSON) {
+        NSLog(@"File couldn't be read!");
+        return;
+    } else {
+        NSError *error =  nil;
+        self.tree = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    }
+}
+
+- (int) getAgeIndex {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //load age
+    int a = (int) [defaults integerForKey:@"Age"];
+    
+    int i = 0;
+    int ageArray[13] = {17, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65, 100};
+    while (a > ageArray[i]) {
+        i++;
+    }
+    return ageArray[i];
+}
+
+- (NSString *)getHeightKey:(int)AgeIndex {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //load height
+    int h = (int) [defaults integerForKey:@"Height"];
+    if (AgeIndex > 1 && h < 150) {
+        return [NSString stringWithFormat:@"%i", 150];
+    }
+    int b = (h + 4) / 5 * 5;
+    return [NSString stringWithFormat:@"%i", b];
     
 }
+
 @end

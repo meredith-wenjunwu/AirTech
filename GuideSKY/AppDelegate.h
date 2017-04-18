@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "BLE.h"
+#import "JQFMDB.h"
+#import "Spirometry.h"
+#import "Gas.h"
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BLEDelegate>
+
+@property BLE *bleShield;
 @property (strong, nonatomic) UIWindow *window;
-
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong) NSPersistentContainer *persistentContainer;

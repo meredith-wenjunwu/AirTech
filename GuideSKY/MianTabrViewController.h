@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #include "LoginViewController.h"
+#include "LineViewController.h"
 
 @protocol tabBarViewDeleage
     @optional
@@ -18,8 +19,9 @@
 
 @interface MianTabrViewController : UITabBarController
 /*-----是否隐藏tabbarView------*/
-- (void)buttonPressed;
+- (void)buttonPressed:(BOOL)isSpirometry;
 + (void)HiddenTabbar:(BOOL)isHidden;
+-(void)resultInvalid:(NSString*) s;
 @end
 
 //创建自定义试图

@@ -17,9 +17,10 @@
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9A5-dn-Y77">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-nm-grq" customClass="BorderButton">
-                            <rect key="frame" x="113" y="110" width="150" height="44"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-nm-grq" customClass="BorderButton">
+                            <rect key="frame" x="113" y="145" width="150" height="44"/>
                             <color key="backgroundColor" red="1" green="0.4679887812875454" blue="0.769715977412189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="spirometry"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="Lag-Dn-xU8"/>
                                 <constraint firstAttribute="height" constant="44" id="vXN-oY-LAt"/>
@@ -43,9 +44,10 @@
                                 <action selector="connectBluetooth:" destination="iN0-l3-epB" eventType="touchUpInside" id="OKD-TL-c9V"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-wb-IeA" customClass="BorderButton">
-                            <rect key="frame" x="113" y="274" width="150" height="44"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-wb-IeA" customClass="BorderButton">
+                            <rect key="frame" x="113" y="334" width="150" height="44"/>
                             <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <accessibility key="accessibilityConfiguration" label="gas"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="qiC-Ef-e3l"/>
                                 <constraint firstAttribute="width" constant="150" id="vdd-L1-QkZ"/>
@@ -65,6 +67,9 @@
                                     <real key="value" value="3"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="connectBluetooth:" destination="iN0-l3-epB" eventType="touchUpInside" id="TWS-Vz-uCP"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw6-W8-Zuh" customClass="BorderButton">
                             <rect key="frame" x="128" y="463" width="120" height="44"/>
@@ -89,17 +94,43 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="KbC-gu-XsN"/>
+                                <action selector="Cancelonclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="UsD-uD-byn"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now, Blow into the Spirometer!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCk-hP-lAT">
+                            <rect key="frame" x="26" y="216" width="325" height="71"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-RU-3Eg">
+                            <rect key="frame" x="37" y="340" width="111" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28C-bx-QYA">
+                            <rect key="frame" x="251" y="334" width="86" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Amv-hZ-vAQ">
+                            <rect key="frame" x="178" y="413" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.77174954341547108" blue="0.95232720468660548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="EWr-8L-iQq"/>
                         <constraint firstItem="vw6-W8-Zuh" firstAttribute="centerY" secondItem="9A5-dn-Y77" secondAttribute="centerY" constant="151.5" id="I3e-ZB-Mnh"/>
                         <constraint firstItem="SdX-wb-IeA" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="JbF-Nl-AOl"/>
-                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="top" secondItem="SdX-wb-IeA" secondAttribute="bottom" constant="145" id="ODt-0a-9hI"/>
-                        <constraint firstItem="SdX-wb-IeA" firstAttribute="top" secondItem="8Gm-nm-grq" secondAttribute="bottom" constant="120" id="uL0-Pv-5VT"/>
+                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="top" secondItem="SdX-wb-IeA" secondAttribute="bottom" constant="85" id="ODt-0a-9hI"/>
+                        <constraint firstItem="Amv-hZ-vAQ" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="SvG-cW-WfM"/>
+                        <constraint firstItem="vw6-W8-Zuh" firstAttribute="top" secondItem="Amv-hZ-vAQ" secondAttribute="bottom" constant="30" id="mVX-W1-ZAc"/>
+                        <constraint firstItem="SdX-wb-IeA" firstAttribute="top" secondItem="8Gm-nm-grq" secondAttribute="bottom" constant="145" id="uL0-Pv-5VT"/>
                         <constraint firstItem="8Gm-nm-grq" firstAttribute="centerX" secondItem="9A5-dn-Y77" secondAttribute="centerX" id="w6B-cX-Uq0"/>
                     </constraints>
                 </view>
@@ -110,6 +141,14 @@
                 <constraint firstItem="9A5-dn-Y77" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gQU-x6-fcY"/>
                 <constraint firstAttribute="trailing" secondItem="9A5-dn-Y77" secondAttribute="trailing" id="yqs-Z6-EzD"/>
             </constraints>
+            <connections>
+                <outlet property="activityIndicator" destination="Amv-hZ-vAQ" id="nnq-o3-IJ9"/>
+                <outlet property="blowMessage" destination="pCk-hP-lAT" id="wTy-Ch-gXV"/>
+                <outlet property="gasAnalysis" destination="SdX-wb-IeA" id="2Ac-Pf-2Un"/>
+                <outlet property="spirometry" destination="8Gm-nm-grq" id="4zw-fH-vJa"/>
+                <outlet property="time" destination="28C-bx-QYA" id="Xnt-Pl-fFl"/>
+                <outlet property="timeLeftLabel" destination="gUs-RU-3Eg" id="B1E-2P-UvR"/>
+            </connections>
             <point key="canvasLocation" x="35.5" y="59.5"/>
         </view>
     </objects>

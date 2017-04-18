@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BEMSimpleLineGraphView.h"
+#import "Spirometry.h"
+#import "Gas.h"
+#import "JQFMDB.h"
 
-@interface PushViewController : UIViewController
+@interface PushViewController : UIViewController <BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *testType;
 - (IBAction)changedTestType:(id)sender;
 

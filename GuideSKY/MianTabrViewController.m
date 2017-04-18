@@ -79,11 +79,50 @@
         [self presentViewController:vc animated:NO completion:nil];
     }
 }
+-(void)resultInvalid:(NSString*) s{
 
--(void)buttonPressed {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"DataVisualization" bundle:nil];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"line"];
-    [self presentViewController:vc animated:NO completion:nil];
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"TRY AGAIN"
+                                     message:s
+                                     preferredStyle:UIAlertControllerStyleAlert];
+    
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+
+}
+
+-(void)buttonPressed: (BOOL) isSpirometry{
+    //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"Bluetooth"]!=YES) {
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Ooooops"
+                                     message:@"You must connect to Bluetooth first!"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    } else {
+        if (isSpirometry) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Spiro"];
+        } else {
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Spiro"];
+        }
+        [self performSegueWithIdentifier: @"presentData" sender: self];
+    }
     
 }
 
@@ -114,12 +153,14 @@
 /*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ In a storyboard-based application, you will often want to do a little preparation before navigation
+ */
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//     //Get the new view controller using [segue destinationViewController].
+//     //Pass the selected object to the new view controller.
+//    [MianTabrViewController HiddenTabbar:false];
+//}
+
 
 @end
 
