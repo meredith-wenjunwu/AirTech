@@ -92,19 +92,21 @@
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
     NSLog(@"%@", s);
     double v = [s doubleValue];
+    isSpirometry  = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
+    if (isSpirometry) {
+        threshold = 61;
+    } else {
+        threshold = 13;
+    }
     if (v > 0 || write) {
-        isSpirometry  = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
-        if (isSpirometry) {
-            threshold = 121;
-        } else {
-            threshold = 13;
-        }
+        
         write = true;
-        [tableData addObject:@(0)];
+        if ([tableData count] == 0) {
+            [tableData addObject:@(0)];
+        }
         [tableData addObject:@(v)];
     }
     
-        
     if ([tableData count] >= threshold) {
         write = false;
         NSString *s = @"0";
@@ -135,6 +137,7 @@ NSTimer *rssiTimer;
     
     [_btnConnect setEnabled:YES];
     [_btnDisconnect setEnabled:NO];
+    [_btnConnect setHidden:NO];
     [_btnDisconnect setHidden:YES];
     [_activityIndicator setHidden:YES];
     [_activityIndicator stopAnimating];
@@ -143,6 +146,7 @@ NSTimer *rssiTimer;
 
 -(void) bleDidConnect
 {
+    [tableData removeAllObjects];
     [_activityIndicator setHidden:YES];
     [_activityIndicator stopAnimating];
     [_btnConnect setHidden:YES];
@@ -150,13 +154,13 @@ NSTimer *rssiTimer;
     [_btnDisconnect setHidden:NO];
     [_btnConnect setEnabled:NO];
     
-    NSString *s = @"1";
-    NSData *d;
-    
-    d = [s dataUsingEncoding:NSUTF8StringEncoding];
-    if (_bleShield.activePeripheral.state == CBPeripheralStateConnected) {
-        [_bleShield write:d];
-    }
+//    NSString *s = @"1";
+//    NSData *d;
+//    
+//    d = [s dataUsingEncoding:NSUTF8StringEncoding];
+//    if (_bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+//        [_bleShield write:d];
+//    }
 
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
     NSLog(@"bleDidConnect");

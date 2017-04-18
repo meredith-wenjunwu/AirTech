@@ -41,10 +41,10 @@ AppDelegate *appdelegate;
 
 
 - (IBAction)connectBluetooth:(id)sender {
-    //[tableData removeAllObjects];
+    [tableData removeAllObjects];
     if ([sender tag] == 1) {
         isSpirometry = YES;
-        threshold = 121;
+        threshold = 61;
         [self.spirometry setTitle:@"Spirometry" forState:UIControlStateNormal];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Spiro"];
         [self.blowMessage setText:@"Now, Blow into the Spirometer!"];
@@ -121,25 +121,37 @@ AppDelegate *appdelegate;
         }
     }
     else {
+        [timer2 invalidate];
+        
         if ([tableData count] >= threshold) {
             [self removeFromSuperview];
             [self.delegate buttonPressed:isSpirometry];
-        }
-        [timer2 invalidate];
-        [self.activityIndicator setHidden:YES];
-        [self.activityIndicator stopAnimating];
-        [self.blowMessage setText:@"Data not received!"];
-        canStart = false;
-        
-        if (isSpirometry) {
-            [self.spirometry setEnabled:YES];
-            [self.spirometry setHidden:NO];
-            [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
         } else {
-            [self.gasAnalysis setEnabled:YES];
-            [self.gasAnalysis setHidden:NO];
-            [self.gasAnalysis setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+            if (canStart) {
+                [self startup];
+            } else {
+                [self.activityIndicator setHidden:YES];
+                [self.activityIndicator stopAnimating];
+                [self.blowMessage setText:@"Data not received!"];
+                canStart = false;
+                
+                if (isSpirometry) {
+                    [self.spirometry setEnabled:YES];
+                    [self.spirometry setHidden:NO];
+                    [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+                } else {
+                    [self.gasAnalysis setEnabled:YES];
+                    [self.gasAnalysis setHidden:NO];
+                    [self.gasAnalysis setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+                }
+                NSString *s = @"0";
+                NSData *d = [s dataUsingEncoding:NSUTF8StringEncoding];
+                if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+                    [bleShield write:d];
+                }
+            }
         }
+        
     }
     
     
@@ -170,12 +182,11 @@ AppDelegate *appdelegate;
     else
     {
         [timer invalidate];
-        if ([tableData count] < threshold) {
-            [self waitForResponse:3];
-        } else {
-            [self removeFromSuperview];
-            [self.delegate buttonPressed:isSpirometry];
+        while ([tableData count] < threshold) {
+            [tableData addObject:@(0)];
         }
+        [self removeFromSuperview];
+        [self.delegate buttonPressed:isSpirometry];
         
         
         

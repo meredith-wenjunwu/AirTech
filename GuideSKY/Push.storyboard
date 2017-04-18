@@ -40,20 +40,8 @@
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="T0O-XM-QEQ">
                                 <rect key="frame" x="41" y="543" width="94" height="29"/>
+                                <color key="tintColor" red="0.66800791025161743" green="0.6117866039276123" blue="0.59873199462890625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stepper>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eK-rj-UfN">
-                                <rect key="frame" x="274" y="542" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="3iU-7y-PsM"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB0-RK-WJc">
                                 <rect key="frame" x="12.5" y="89" width="350" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,6 +61,7 @@
                                     <segment title="FEV1/FVC"/>
                                     <segment title="PEF"/>
                                 </segments>
+                                <color key="tintColor" red="0.66800791025161743" green="0.6117866039276123" blue="0.59873199462890625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLe-2o-MwX" customClass="BorderButton">
                                 <rect key="frame" x="137.5" y="587" width="100" height="30"/>
@@ -99,19 +88,25 @@
                                     <segue destination="tDV-dr-rTI" kind="show" id="pUA-fi-IPi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ih-zmT">
+                                <rect key="frame" x="274" y="536" width="60" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92492955923080444" green="0.94107717275619507" blue="0.9534875750541687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oFb-gG-xeX" firstAttribute="top" secondItem="xLe-2o-MwX" secondAttribute="bottom" constant="50" id="9uT-7T-fFi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hro-Ih-zmT" secondAttribute="trailing" constant="21" id="GMq-hB-dR4"/>
                             <constraint firstItem="T0O-XM-QEQ" firstAttribute="top" secondItem="wkh-zF-XCb" secondAttribute="bottom" constant="20" id="MmL-af-RZV"/>
                             <constraint firstItem="XB0-RK-WJc" firstAttribute="top" secondItem="wzv-hy-kTr" secondAttribute="bottom" constant="25" id="NaJ-Qr-Ldh"/>
                             <constraint firstItem="wkh-zF-XCb" firstAttribute="centerX" secondItem="0ah-l6-1Ui" secondAttribute="centerX" id="Y6A-Ha-QpD"/>
                             <constraint firstItem="T0O-XM-QEQ" firstAttribute="leading" secondItem="0ah-l6-1Ui" secondAttribute="leadingMargin" constant="25" id="bh1-fo-OCr"/>
                             <constraint firstItem="xLe-2o-MwX" firstAttribute="top" secondItem="T0O-XM-QEQ" secondAttribute="bottom" constant="15" id="bnp-7Q-7PL"/>
-                            <constraint firstItem="xLe-2o-MwX" firstAttribute="top" secondItem="3eK-rj-UfN" secondAttribute="bottom" constant="15" id="edJ-QM-muq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3eK-rj-UfN" secondAttribute="trailing" constant="25" id="h7K-vk-xjw"/>
                             <constraint firstItem="XB0-RK-WJc" firstAttribute="centerX" secondItem="0ah-l6-1Ui" secondAttribute="centerX" id="vEx-Zr-dgc"/>
                             <constraint firstItem="xLe-2o-MwX" firstAttribute="centerX" secondItem="0ah-l6-1Ui" secondAttribute="centerX" id="vRB-7L-nzI"/>
+                            <constraint firstItem="hro-Ih-zmT" firstAttribute="centerY" secondItem="T0O-XM-QEQ" secondAttribute="centerY" id="ylB-aa-CG3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vhR-TK-MTb">
@@ -131,14 +126,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="graphObjectIncrement" destination="T0O-XM-QEQ" id="KDB-xh-QMp"/>
-                        <outlet property="numOfObject" destination="3eK-rj-UfN" id="Twu-8w-fMo"/>
                         <outlet property="spirometryParam" destination="wkh-zF-XCb" id="vRM-on-tu3"/>
                         <outlet property="testType" destination="ydJ-dy-90O" id="Erk-dx-Dpj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpF-wX-D32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="-64"/>
+            <point key="canvasLocation" x="1981.5999999999999" y="-64.31784107946028"/>
         </scene>
         <!--Stats-->
         <scene sceneID="FiU-EY-4nl">
@@ -181,6 +175,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82233518362045288" green="0.86280566453933716" blue="0.87124752998352051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RjX-0y-ZO5">
                                         <rect key="frame" x="0.0" y="110.5" width="375" height="55"/>
@@ -212,6 +207,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82233518362045288" green="0.86280566453933716" blue="0.87124752998352051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qBs-tD-T1h">
                                         <rect key="frame" x="0.0" y="165.5" width="375" height="55"/>
@@ -243,6 +239,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82233518362045288" green="0.86280566453933716" blue="0.87124752998352051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="FvK-qm-JBf">
                                         <rect key="frame" x="0.0" y="220.5" width="375" height="55"/>
@@ -274,6 +271,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82233518362045288" green="0.86280566453933716" blue="0.87124752998352051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

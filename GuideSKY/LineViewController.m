@@ -37,7 +37,7 @@
     db = [JQFMDB shareDatabase:@"All"];
     if (isSpirometry) {
         // frequency of pressure sensor
-        hz = 20;
+        hz = 10;
     } else {
         hz = 2;
         [self.pefText setHidden:YES];
@@ -116,13 +116,13 @@
     // Add objects to the array based on the stepper value
     
     
-    float a[121], b[121], c[121];
+    float a[61], b[61], c[61];
     
     float max = -1;
-    for (int i = 0; i < 121; i++) {
+    for (int i = 0; i < 61; i++) {
         float f = [self.arrayOfValues[i] floatValue];
         a[i] = f;
-        b[i] = 0.05;
+        b[i] = 0.1;
         if (f > max) {
             max = f;
         }
@@ -131,7 +131,7 @@
         
     }
     //trapzoidal integral
-    vDSP_vtrapz(a, 1, b, c, 1, 121);
+    vDSP_vtrapz(a, 1, b, c, 1, 61);
     
     //need to comment out later
     [db jq_deleteAllDataFromTable:@"spirometryTable"];
@@ -147,12 +147,12 @@
     Spirometry *spirometry = [[Spirometry alloc]init];
     spirometry.values = self.arrayOfValues;
     spirometry.date = [NSDate dateWithTimeInterval: seconds sinceDate: now];
-    spirometry.FEV1 = (double) c[20];
-    spirometry.FVC = (double) c[120];
+    spirometry.FEV1 = (double) c[10];
+    spirometry.FVC = (double) c[60];
     spirometry.PEF = PEF;
-    [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", c[120]]];
-    [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", c[20]]];
-    [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (c[20]/c[120])]];
+    [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", c[60]]];
+    [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", c[10]]];
+    [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (c[10]/c[60])]];
     [self.pefText setText:[NSString stringWithFormat:@"%0.2f", PEF]];
     
     //[db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
@@ -223,7 +223,7 @@
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
     if (isSpirometry)
-        return 20;
+        return 10;
     else
         return 2;
 }
@@ -267,11 +267,6 @@
     return label;
 }
 
-- (NSDate *)dateForGraphAfterDate:(NSDate *)date {
-    NSTimeInterval secondsInTwentyFourHours = 24 * 60 * 60;
-    NSDate *newDate = [date dateByAddingTimeInterval:secondsInTwentyFourHours];
-    return newDate;
-}
 
 
 @end

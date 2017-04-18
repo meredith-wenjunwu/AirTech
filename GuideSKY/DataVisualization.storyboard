@@ -54,7 +54,7 @@
                                     <outlet property="delegate" destination="jr7-u6-XYh" id="p2X-7k-XBM"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtv-ah-fI8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtv-ah-fI8">
                                 <rect key="frame" x="124" y="28" width="123" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -110,7 +110,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92492955923080444" green="0.94107717275619507" blue="0.9534875750541687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="22w-2l-cnq" firstAttribute="top" secondItem="mgK-i4-d76" secondAttribute="bottom" constant="140" id="08P-BU-qs3"/>
                             <constraint firstItem="9Y7-kg-uCm" firstAttribute="leading" secondItem="jr7-u6-XYh" secondAttribute="leadingMargin" constant="30" id="0e1-lg-CbI"/>

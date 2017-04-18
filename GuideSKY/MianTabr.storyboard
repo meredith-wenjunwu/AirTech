@@ -63,6 +63,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.37997549772262573" green="0.38735055923461914" blue="0.43712225556373596" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -76,6 +77,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Disconnect">
+                                    <color key="titleColor" red="0.37997549772262573" green="0.38735055923461914" blue="0.43712225556373596" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -83,7 +85,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92492955923080444" green="0.94107717275619507" blue="0.9534875750541687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HaL-Ma-YcE" firstAttribute="top" secondItem="d75-gz-jif" secondAttribute="bottom" constant="33" id="2fk-Wc-mbo"/>
                             <constraint firstItem="d75-gz-jif" firstAttribute="centerX" secondItem="Jey-X8-rdX" secondAttribute="centerX" id="3sj-0x-pQc"/>
