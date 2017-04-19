@@ -14,6 +14,7 @@
 		61106BE31EA529B6001F8735 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61106BE21EA529B6001F8735 /* Accelerate.framework */; };
 		61400C031EA1F64200F2AD6A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C021EA1F64200F2AD6A /* StatsViewController.m */; };
 		61400C061EA2000700F2AD6A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C051EA2000700F2AD6A /* HomeViewController.m */; };
+		6177BC1A1EA7628A002C486E /* Predicted.m in Sources */ = {isa = PBXBuildFile; fileRef = 6177BC191EA7628A002C486E /* Predicted.m */; };
 		6186B09F1EA1C16A004996D7 /* Spirometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B09E1EA1C16A004996D7 /* Spirometry.m */; };
 		6186B0A21EA1C3D0004996D7 /* Gas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A11EA1C3D0004996D7 /* Gas.m */; };
 		6186B0AA1EA1CA81004996D7 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A91EA1CA81004996D7 /* BluetoothViewController.m */; };
@@ -77,6 +78,8 @@
 		61400C021EA1F64200F2AD6A /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		61400C041EA1FFEF00F2AD6A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		61400C051EA2000700F2AD6A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		6177BC181EA76231002C486E /* Predicted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Predicted.h; sourceTree = "<group>"; };
+		6177BC191EA7628A002C486E /* Predicted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Predicted.m; sourceTree = "<group>"; };
 		6186B0991EA1C0E8004996D7 /* Spirometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spirometry.h; sourceTree = "<group>"; };
 		6186B09E1EA1C16A004996D7 /* Spirometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spirometry.m; sourceTree = "<group>"; };
 		6186B0A01EA1C3BB004996D7 /* Gas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gas.h; sourceTree = "<group>"; };
@@ -333,6 +336,8 @@
 				61AFE17F1EA34D05000A6338 /* Constant.h */,
 				6186B0A01EA1C3BB004996D7 /* Gas.h */,
 				6186B0A11EA1C3D0004996D7 /* Gas.m */,
+				6177BC181EA76231002C486E /* Predicted.h */,
+				6177BC191EA7628A002C486E /* Predicted.m */,
 				83664C901E23380600CA2BC9 /* Info.plist */,
 				83664C821E23380600CA2BC9 /* AppDelegate.h */,
 				83664C831E23380600CA2BC9 /* AppDelegate.m */,
@@ -665,6 +670,7 @@
 				835D014E1E24B4D90053E40E /* CenterView.m in Sources */,
 				6186B0A21EA1C3D0004996D7 /* Gas.m in Sources */,
 				61106BE11EA49340001F8735 /* Global.m in Sources */,
+				6177BC1A1EA7628A002C486E /* Predicted.m in Sources */,
 				83664CBE1E233C0A00CA2BC9 /* CollectionViewFlowLayout.m in Sources */,
 				83664C811E23380600CA2BC9 /* main.m in Sources */,
 				83664CB41E23386900CA2BC9 /* GuideViewController.m in Sources */,

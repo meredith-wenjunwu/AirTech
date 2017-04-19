@@ -47,14 +47,14 @@ AppDelegate *appdelegate;
         threshold = 61;
         [self.spirometry setTitle:@"Spirometry" forState:UIControlStateNormal];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Spiro"];
-        [self.blowMessage setText:@"Now, Blow into the Spirometer!"];
+        [self.blowMessage setText:@"Now, Blow into the Spirometer with Full Effort!"];
         [self.blowMessage setFont:[UIFont italicSystemFontOfSize:25]];
     } else {
         isSpirometry = NO;
-        threshold = 13;
+        threshold = 31;
         [self.gasAnalysis setTitle:@"Gas Analysis" forState:UIControlStateNormal];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Spiro"];
-        [self.blowMessage setText:@"Now, Blow into the Gas Analyzer!"];
+        [self.blowMessage setText:@"Now, Blow into the Gas Analyzer normally!"];
         [self.blowMessage setFont:[UIFont italicSystemFontOfSize:25]];
     }
     
@@ -68,11 +68,21 @@ AppDelegate *appdelegate;
         [self.gasAnalysis setHidden:YES];
         [self.gasAnalysis setEnabled:NO];
         [self.blowMessage setHidden:NO];
-        [self.timeLeftLabel setHidden:NO];
-        [self.time setText:@"6"];
-        [self.time setHidden:NO];
+        if (isSpirometry) {
+            [self.timeLeftLabel setHidden:NO];
+            [self.time setText:@"6"];
+            [self.time setHidden:NO];
+        } else {
+            [self.timeLeftLabel setHidden:YES];
+            [self.time setHidden:YES];
+        }
+        NSString *s;
         
-        NSString *s = @"1";
+        if (isSpirometry ) {
+             s = @"1";
+        } else {
+            s = @"2";
+        }
         NSData *d;
         
         d = [s dataUsingEncoding:NSUTF8StringEncoding];
@@ -159,7 +169,12 @@ AppDelegate *appdelegate;
 
 -(void)startup {
     currMinute=0;
-    currSeconds=6;
+    
+    if (isSpirometry) {
+        currSeconds=6;
+    } else {
+        currSeconds = 15;
+    }
     timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
 }
 
@@ -177,7 +192,8 @@ AppDelegate *appdelegate;
             currSeconds-=1;
         }
         if(currMinute>-1)
-            [self.time setText:[NSString stringWithFormat:@"%i",currSeconds]];
+            if (isSpirometry)
+                [self.time setText:[NSString stringWithFormat:@"%i",currSeconds]];
     }
     else
     {
@@ -199,7 +215,6 @@ AppDelegate *appdelegate;
         //        [self.blowMessage setText:@"Exhale with FULL EFFORT!"];
         //        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
 #pragma move to data visualization
-        //[tableData removeAllObjects];
     }
 }
 

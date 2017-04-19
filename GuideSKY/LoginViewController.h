@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JQFMDB.h"
+#import "Predicted.h"
 
 
 @interface LoginViewController : UITableViewController <UITextFieldDelegate>

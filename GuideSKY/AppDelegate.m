@@ -33,6 +33,7 @@
         JQFMDB *db = [JQFMDB shareDatabase:@"All"];
         [db jq_createTable:@"spirometryTable" dicOrModel:[Spirometry class]];        
         [db jq_createTable:@"gasTable" dicOrModel:[Gas class]];
+        [db jq_createTable:@"predictedValue" dicOrModel:[Predicted class]];
         
         UIViewController  *vc =[[UIStoryboard storyboardWithName:@"Guide" bundle:nil] instantiateViewControllerWithIdentifier:@
                                 "Guide"];

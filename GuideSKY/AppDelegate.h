@@ -12,7 +12,7 @@
 #import "JQFMDB.h"
 #import "Spirometry.h"
 #import "Gas.h"
-
+#import "Predicted.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,BLEDelegate>

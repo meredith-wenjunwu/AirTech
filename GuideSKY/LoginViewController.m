@@ -77,11 +77,13 @@
         NSString *heightK = [self getHeightKey:(int)h];
         NSDictionary *currentArray = [currentNode objectForKey:heightK];
         
-        if (![_db jq_isExistTable:@"predictedValue"]) {
-            NSLog(@"No predicted value!");
-            [_db jq_createTable:@"predictedValue" dicOrModel:@{@"FVC":@"TEXT", @"FEV1":@"TEXT", @"FEV1/FVC":@"TEXT", @"PEF":@"TEXT"}];
-        }
-        [_db jq_insertTable:@"predictedValue" dicOrModel:currentArray];
+        Predicted *p = [[Predicted alloc]init];
+        p.fvc = [[currentArray objectForKey:@"FVC"] doubleValue];
+        p.fev1 = [[currentArray objectForKey:@"FEV1"] doubleValue];
+        p.fevfvc = [[currentArray objectForKey:@"FEV1/FVC"]doubleValue];
+        p.pef =[[currentArray objectForKey:@"PEF"] doubleValue];
+        
+        [_db jq_insertTable:@"predictedValue" dicOrModel:p];
     }
 }
 

@@ -39,7 +39,7 @@
         // frequency of pressure sensor
         hz = 10;
     } else {
-        hz = 2;
+        hz = 5;
         [self.pefText setHidden:YES];
         [self.pefTitle setHidden:YES];
         [self.fvcText setHidden:YES];
@@ -155,9 +155,10 @@
     [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (c[10]/c[60])]];
     [self.pefText setText:[NSString stringWithFormat:@"%0.2f", PEF]];
     
-    //[db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
+    [db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
     NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
     NSLog(@"表中所有数据:%@", spiroArr);
+    //[db jq_deleteAllDataFromTable:(NSString *)@"spirometryTable"];
     
 }
 
@@ -169,13 +170,13 @@
     [self.arrayOfDates removeAllObjects];
     
     float max = -1;
-    for (int i = 0; i < (6*hz + 1); i++) {
+    for (int i = 0; i < 31; i++) {
         float f = [self.arrayOfValues[i] floatValue];
         if (f > max) {
             max = f;
         }
         
-        [self.arrayOfDates addObject:@(i)];
+        [self.arrayOfDates addObject:@(i*0.5)];
     }
     
     //need to comment out later
@@ -205,6 +206,7 @@
     
     NSArray *gasArr = [db jq_lookupTable:@"gasTable" dicOrModel:[Gas class] whereFormat:nil];
     NSLog(@"表中所有数据:%@", gasArr);
+    //[db jq_deleteAllDataFromTable:(NSString *)@"gasTable"];
 }
 
 

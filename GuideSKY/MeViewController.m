@@ -164,14 +164,17 @@
         NSString *heightK = [self getHeightKey:(int)h];
         NSDictionary *currentArray = [currentNode objectForKey:heightK];
         
-//        if (![_db jq_isExistTable:@"predictedValue"]) {
-//            NSLog(@"No predicted value!");
-//            //[_db jq_createTable:@"predictedValue" dicOrModel:[NSDictionary class]];
-//        }
-        
         [_db jq_deleteAllDataFromTable:@"predictedValue"];
-        [_db jq_insertTable:@"predictedValue" dicOrModel:currentArray];
+        Predicted *p = [[Predicted alloc]init];
+        p.fvc = [[currentArray objectForKey:@"FVC"] doubleValue];
+        p.fev1 = [[currentArray objectForKey:@"FEV1"] doubleValue];
+        p.fevfvc = [[currentArray objectForKey:@"FEV1/FVC"]doubleValue];
+        p.pef =[[currentArray objectForKey:@"PEF"] doubleValue];
+        [_db jq_insertTable:@"predictedValue" dicOrModel:p];
         
+        NSArray *userValue = [_db jq_lookupTable:@"predictedValue" dicOrModel:[Predicted class] whereFormat:nil];
+  
+        NSLog(@"表中所有数据:%@", userValue);
         // Alert
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Success"

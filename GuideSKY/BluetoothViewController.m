@@ -96,15 +96,16 @@
     if (isSpirometry) {
         threshold = 61;
     } else {
-        threshold = 13;
+        threshold = 31;
     }
-    if (v > 0 || write) {
+    
+    if ((v > 0 || write) && [tableData count] < threshold) {
         
         write = true;
         if ([tableData count] == 0) {
             [tableData addObject:@(0)];
         }
-        [tableData addObject:@(v)];
+        [tableData addObject:@(v*3)];
     }
     
     if ([tableData count] >= threshold) {
@@ -165,10 +166,10 @@ NSTimer *rssiTimer;
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
     NSLog(@"bleDidConnect");
 }
-
-- (float)getRandomFloat {
-    float i1 = (float)(arc4random_uniform(50000))/100 ;
-    return i1;
-}
+//
+//- (float)getRandomFloat {
+//    float i1 = (float)(arc4random_uniform(50000))/100 ;
+//    return i1;
+//}
 
 @end

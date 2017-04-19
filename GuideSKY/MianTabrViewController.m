@@ -69,7 +69,7 @@
     [self.view addSubview:self.tabBarView];
     
 }
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewDidAppear:false];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"registered"]){
