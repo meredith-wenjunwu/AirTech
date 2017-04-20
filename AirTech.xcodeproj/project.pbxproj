@@ -12,13 +12,14 @@
 		61106BDE1EA45EA6001F8735 /* male.json in Resources */ = {isa = PBXBuildFile; fileRef = 61106BDD1EA45EA6001F8735 /* male.json */; };
 		61106BE11EA49340001F8735 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 61106BE01EA49340001F8735 /* Global.m */; };
 		61106BE31EA529B6001F8735 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61106BE21EA529B6001F8735 /* Accelerate.framework */; };
-		61400C031EA1F64200F2AD6A /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C021EA1F64200F2AD6A /* StatsViewController.m */; };
 		61400C061EA2000700F2AD6A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61400C051EA2000700F2AD6A /* HomeViewController.m */; };
 		6177BC1A1EA7628A002C486E /* Predicted.m in Sources */ = {isa = PBXBuildFile; fileRef = 6177BC191EA7628A002C486E /* Predicted.m */; };
 		6186B09F1EA1C16A004996D7 /* Spirometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B09E1EA1C16A004996D7 /* Spirometry.m */; };
 		6186B0A21EA1C3D0004996D7 /* Gas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A11EA1C3D0004996D7 /* Gas.m */; };
 		6186B0AA1EA1CA81004996D7 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186B0A91EA1CA81004996D7 /* BluetoothViewController.m */; };
+		619721A81EA96E8E005E1DF8 /* What Is a Spirometry Test.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 619721A71EA96E8E005E1DF8 /* What Is a Spirometry Test.mp4 */; };
 		61AFE17E1EA3464D000A6338 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AFE17C1EA3464D000A6338 /* BLE.m */; };
+		61CB0ECE1EA9664100A8C1FB /* videoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CB0ECD1EA9664100A8C1FB /* videoViewController.m */; };
 		61D0EEE41E9C4CB3002A00F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */; };
 		61D0EFD01E9C6B9F002A00F7 /* DataVisualization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */; };
 		61D0EFD91E9C6E89002A00F7 /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0EFD81E9C6E89002A00F7 /* LineViewController.m */; };
@@ -74,8 +75,6 @@
 		61106BDF1EA49317001F8735 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		61106BE01EA49340001F8735 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		61106BE21EA529B6001F8735 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		61400C011EA1F64200F2AD6A /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		61400C021EA1F64200F2AD6A /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		61400C041EA1FFEF00F2AD6A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		61400C051EA2000700F2AD6A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6177BC181EA76231002C486E /* Predicted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Predicted.h; sourceTree = "<group>"; };
@@ -86,10 +85,13 @@
 		6186B0A11EA1C3D0004996D7 /* Gas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gas.m; sourceTree = "<group>"; };
 		6186B0A81EA1CA81004996D7 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
 		6186B0A91EA1CA81004996D7 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		619721A71EA96E8E005E1DF8 /* What Is a Spirometry Test.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "What Is a Spirometry Test.mp4"; sourceTree = "<group>"; };
 		61AFE17B1EA3464D000A6338 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		61AFE17C1EA3464D000A6338 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		61AFE17D1EA3464D000A6338 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 		61AFE17F1EA34D05000A6338 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		61CB0ECB1EA9660300A8C1FB /* videoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoViewController.h; sourceTree = "<group>"; };
+		61CB0ECD1EA9664100A8C1FB /* videoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoViewController.m; sourceTree = "<group>"; };
 		61D0EEE31E9C4CB3002A00F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		61D0EEE51E9C4D00002A00F7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		61D0EFCF1E9C6B9F002A00F7 /* DataVisualization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataVisualization.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		619721A41EA96687005E1DF8 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				619721A71EA96E8E005E1DF8 /* What Is a Spirometry Test.mp4 */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
 		61AFE17A1EA3464D000A6338 /* BLE */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		83664C7E1E23380600CA2BC9 /* AirTech */ = {
 			isa = PBXGroup;
 			children = (
+				619721A41EA96687005E1DF8 /* Video */,
 				61AFE17A1EA3464D000A6338 /* BLE */,
 				83664D101E23660300CA2BC9 /* base */,
 				83664D151E23668500CA2BC9 /* other */,
@@ -270,10 +281,10 @@
 		83664D111E23660F00CA2BC9 /* contoller */ = {
 			isa = PBXGroup;
 			children = (
+				61CB0ECB1EA9660300A8C1FB /* videoViewController.h */,
+				61CB0ECD1EA9664100A8C1FB /* videoViewController.m */,
 				835D014C1E24B4D90053E40E /* CenterView.h */,
 				835D014D1E24B4D90053E40E /* CenterView.m */,
-				61400C011EA1F64200F2AD6A /* StatsViewController.h */,
-				61400C021EA1F64200F2AD6A /* StatsViewController.m */,
 				61400C041EA1FFEF00F2AD6A /* HomeViewController.h */,
 				61400C051EA2000700F2AD6A /* HomeViewController.m */,
 				6186B0A81EA1CA81004996D7 /* BluetoothViewController.h */,
@@ -491,6 +502,7 @@
 				835D01501E24B57D0053E40E /* CenterView.xib in Resources */,
 				83664C8C1E23380600CA2BC9 /* Assets.xcassets in Resources */,
 				83664CB91E23398600CA2BC9 /* Guide.storyboard in Resources */,
+				619721A81EA96E8E005E1DF8 /* What Is a Spirometry Test.mp4 in Resources */,
 				835D014B1E24B3F00053E40E /* Push.storyboard in Resources */,
 				83664D1C1E236F8400CA2BC9 /* MianTabr.storyboard in Resources */,
 				61106BDC1EA41A66001F8735 /* female.json in Resources */,
@@ -660,11 +672,11 @@
 				83664CB71E2338BE00CA2BC9 /* LoginViewController.m in Sources */,
 				835D01411E247F1E0053E40E /* PushViewController.m in Sources */,
 				83664CC41E233F1900CA2BC9 /* GuideCollectionViewCell.m in Sources */,
+				61CB0ECE1EA9664100A8C1FB /* videoViewController.m in Sources */,
 				83664C841E23380600CA2BC9 /* AppDelegate.m in Sources */,
 				61D0EFD91E9C6E89002A00F7 /* LineViewController.m in Sources */,
 				61AFE17E1EA3464D000A6338 /* BLE.m in Sources */,
 				83664D1F1E23718500CA2BC9 /* MianTabrViewController.m in Sources */,
-				61400C031EA1F64200F2AD6A /* StatsViewController.m in Sources */,
 				83664D281E2393DE00CA2BC9 /* MeViewController.m in Sources */,
 				83664D0F1E235E4600CA2BC9 /* BorderButton.m in Sources */,
 				835D014E1E24B4D90053E40E /* CenterView.m in Sources */,

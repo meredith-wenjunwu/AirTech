@@ -21,6 +21,8 @@
 @property(nonatomic,strong)NSArray *titlesArray;
 @property(nonatomic,strong)TabBarView *tabBarView;
 @property(nonatomic,strong)UIVerticalButton *seletBtn;
+@property JQFMDB *db;
+
 @end
 
 @implementation MianTabrViewController
@@ -62,6 +64,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tabBar removeFromSuperview];
+    _db = [JQFMDB shareDatabase:@"All"];
     [self.tabBarView initWithItemImages:self.normalArray selecteArray:self.selectedArray titleArray:self.titlesArray];
     self.tabBarView.showCenter = true;
     self.tabBarView.delegate = self;
@@ -156,9 +159,20 @@
  In a storyboard-based application, you will often want to do a little preparation before navigation
  */
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    BOOL s = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
 //     //Get the new view controller using [segue destinationViewController].
 //     //Pass the selected object to the new view controller.
 //    [MianTabrViewController HiddenTabbar:false];
+//    [super prepareForSegue:segue sender:sender];
+//    
+//    if ([segue.identifier isEqualToString:@"presentData"] && s) {
+//        LineViewController *controller = segue.destinationViewController;
+//        NSArray *spiroArr = [_db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
+//        Spirometry *slast = [spiroArr lastObject];
+//        controller.arrayOfValues = slast.values;
+//        controller.arrayOfDates = slast.times;
+//    }
+//
 //}
 
 

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GuideSKY/MeViewController.m"
-            timestampString = "514321727.215814"
+            filePath = "GuideSKY/PushViewController.m"
+            timestampString = "514376164.216828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "-Change:"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "-clearData:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GuideSKY/MeViewController.m"
-            timestampString = "514321727.215814"
+            filePath = "GuideSKY/PushViewController.m"
+            timestampString = "514376065.918427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "-Change:"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-refreshdata"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GuideSKY/MeViewController.m"
-            timestampString = "514321727.215814"
+            filePath = "GuideSKY/videoViewController.m"
+            timestampString = "514420545.948261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-Change:"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

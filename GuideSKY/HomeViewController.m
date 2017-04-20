@@ -24,6 +24,20 @@
 }
 -(IBAction)refresh:(id)sender {
     [self loadData];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Updated"
+                                 message:@"Data has been successfully updated!"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                }];
+    [alert addAction:yesButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -97,20 +111,6 @@
         [self presentViewController:alert animated:YES completion:nil];
         return;
     }
-    UIAlertController * alert = [UIAlertController
-                                 alertControllerWithTitle:@"Updated"
-                                 message:@"Data has been successfully updated!"
-                                 preferredStyle:UIAlertControllerStyleAlert];
-    
-    
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action) {
-                                    //Handle your yes please button action here
-                                }];
-    [alert addAction:yesButton];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

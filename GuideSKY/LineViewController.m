@@ -104,61 +104,60 @@
 #pragma mark - generate data for spirometry
 
 - (void)spirometryDatasets {
+
     // Reset the arrays of values (Y-Axis points) and dates (X-Axis points / labels)
-    self.arrayOfValues = [Global array];
-    if (!self.arrayOfValues) self.arrayOfValues = [[NSMutableArray alloc] init];
-    if (!self.arrayOfDates) self.arrayOfDates = [[NSMutableArray alloc] init];
-    [self.arrayOfDates removeAllObjects];
+//    if (!self.arrayOfValues) self.arrayOfValues = [[NSMutableArray alloc] init];
+//    if (!self.arrayOfDates) self.arrayOfDates = [[NSMutableArray alloc] init];
+//    [self.arrayOfDates removeAllObjects];
     
     //    totalNumber = 0;
     //    NSDate *baseDate = [NSDate date];
     //    BOOL showNullValue = true;
     // Add objects to the array based on the stepper value
     
+//    
+//    float a[61], b[61], c[61];
+//    
+//    float max = -1;
+//    for (int i = 0; i < 61; i++) {
+//        float f = [self.arrayOfValues[i] floatValue];
+//        a[i] = f;
+//        b[i] = 0.1;
+//        if (f > max) {
+//            max = f;
+//        }
+//        
+//        [self.arrayOfDates addObject:@(i*0.1)];
+//        
+//    }
+//    //trapzoidal integral
+//    vDSP_vtrapz(a, 1, b, c, 1, 61);
+//    
+//    //need to comment out later
+//    //[db jq_deleteAllDataFromTable:@"spirometryTable"];
+//    
+//    double PEF = (double) max;
+//    
+//    NSDate *now = [NSDate date];
+//    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+//    NSInteger seconds = [tz secondsFromGMTForDate: now];
+//    NSDate *new = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//    df.dateFormat = @"yyyy/MM/dd";
+//    NSString *dateS = [df stringFromDate:new];
     
-    float a[61], b[61], c[61];
-    
-    float max = -1;
-    for (int i = 0; i < 61; i++) {
-        float f = [self.arrayOfValues[i] floatValue];
-        a[i] = f;
-        b[i] = 0.1;
-        if (f > max) {
-            max = f;
-        }
-        
-        [self.arrayOfDates addObject:@(i)];
-        
-    }
-    //trapzoidal integral
-    vDSP_vtrapz(a, 1, b, c, 1, 61);
-    
-    //need to comment out later
-    [db jq_deleteAllDataFromTable:@"spirometryTable"];
-    
-    double PEF = (double) max;
-    
-    NSDate *now = [NSDate date];
-    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
-    NSInteger seconds = [tz secondsFromGMTForDate: now];
-    
-    
-#pragma initiate Spirometry result and store it in database
-    Spirometry *spirometry = [[Spirometry alloc]init];
-    spirometry.values = self.arrayOfValues;
-    spirometry.date = [NSDate dateWithTimeInterval: seconds sinceDate: now];
-    spirometry.FEV1 = (double) c[10];
-    spirometry.FVC = (double) c[60];
-    spirometry.PEF = PEF;
-    [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", c[60]]];
-    [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", c[10]]];
-    [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (c[10]/c[60])]];
-    [self.pefText setText:[NSString stringWithFormat:@"%0.2f", PEF]];
-    
-    [db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
     NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
-    NSLog(@"表中所有数据:%@", spiroArr);
-    //[db jq_deleteAllDataFromTable:(NSString *)@"spirometryTable"];
+    Spirometry *spirometry = [spiroArr lastObject];
+    self.arrayOfValues = spirometry.values;
+    self.arrayOfDates = spirometry.times;
+    [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", spirometry.FVC]];
+    [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", spirometry.FEV1]];
+    [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (spirometry.FVC/spirometry.FEV1)]];
+    [self.pefText setText:[NSString stringWithFormat:@"%0.2f", spirometry.PEF]];
+    
+//    [db jq_insertTable:@"spirometryTable" dicOrModel:spirometry];
+//    NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
+//    Spirometry *last = [spiroArr lastObject];
     
 }
 
@@ -187,12 +186,16 @@
     NSDate *now = [NSDate date];
     NSTimeZone *tz = [NSTimeZone defaultTimeZone];
     NSInteger seconds = [tz secondsFromGMTForDate: now];
+    NSDate *new = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    df.dateFormat = @"yyyy/MM/dd";
+    NSString *dateS = [df stringFromDate:new];
     
     
 #pragma initiate Spirometry result and store it in database
     Gas *gas = [[Gas alloc]init];
-    gas.values = self.arrayOfValues;
-    gas.date = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+    gas.values = [[NSMutableArray alloc] initWithArray:self.arrayOfValues copyItems:YES];
+    gas.date = dateS;
     gas.max = PEF;
     
     
@@ -204,8 +207,8 @@
     
     [db jq_insertTable:@"gasTable" dicOrModel:gas];
     
-    NSArray *gasArr = [db jq_lookupTable:@"gasTable" dicOrModel:[Gas class] whereFormat:nil];
-    NSLog(@"表中所有数据:%@", gasArr);
+//    NSArray *gasArr = [db jq_lookupTable:@"gasTable" dicOrModel:[Gas class] whereFormat:nil];
+//    NSLog(@"表中所有数据:%@", gasArr);
     //[db jq_deleteAllDataFromTable:(NSString *)@"gasTable"];
 }
 

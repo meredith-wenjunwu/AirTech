@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Global.h"
+#import "Spirometry.h"
+#import "JQFMDB.h"
+#import "Predicted.h"
+
 
 @interface CenterView : UIView
 @property (nonatomic, assign) id delegate;
@@ -17,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLeftLabel;
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property NSMutableArray *tableData;
+@property NSMutableArray *tableTime;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *gasAnalysis;
 @property (weak, nonatomic) IBOutlet UIButton *spirometry;

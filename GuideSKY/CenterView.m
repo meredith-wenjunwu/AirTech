@@ -17,6 +17,7 @@
     BOOL canStart;
     BOOL isSpirometry;
     int threshold;
+    JQFMDB *db;
 }
 @end
 
@@ -25,6 +26,7 @@ AppDelegate *appdelegate;
 @synthesize bleShield;
 @synthesize tableData;
 @synthesize spirometry;
+@synthesize tableTime;
 
 
 - (IBAction)Cancelonclick:(id)sender {
@@ -36,12 +38,14 @@ AppDelegate *appdelegate;
         [bleShield write:d];
     }
     [tableData removeAllObjects];
+    [tableTime removeAllObjects];
     [self removeFromSuperview];
 }
 
 
 - (IBAction)connectBluetooth:(id)sender {
     [tableData removeAllObjects];
+    [tableTime removeAllObjects];
     if ([sender tag] == 1) {
         isSpirometry = YES;
         threshold = 61;
@@ -79,7 +83,7 @@ AppDelegate *appdelegate;
         NSString *s;
         
         if (isSpirometry ) {
-             s = @"1";
+            s = @"1";
         } else {
             s = @"2";
         }
@@ -201,20 +205,10 @@ AppDelegate *appdelegate;
         while ([tableData count] < threshold) {
             [tableData addObject:@(0)];
         }
-        [self removeFromSuperview];
-        [self.delegate buttonPressed:isSpirometry];
-        
-        
-        
-#pragma implement validation check and then tableData --> db
-        //        [self.timeLeftLabel setHidden:YES];
-        //        [self.time setHidden:YES];
-        //        [self.spirometry setEnabled:YES];
-        //        [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
-        //        [self.spirometry setHidden:NO];
-        //        [self.blowMessage setText:@"Exhale with FULL EFFORT!"];
-        //        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
-#pragma move to data visualization
+        if ([self isvalid]) {
+            [self removeFromSuperview];
+            [self.delegate buttonPressed:isSpirometry];
+        }
     }
 }
 
@@ -228,6 +222,7 @@ AppDelegate *appdelegate;
         self.frame = [UIScreen mainScreen].bounds;
         appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         bleShield = appdelegate.bleShield;
+        db = [JQFMDB shareDatabase:@"All"];
         
         
         [self.blowMessage setHidden:YES];
@@ -240,6 +235,98 @@ AppDelegate *appdelegate;
     }
     return self;
 }
+
+- (BOOL) isvalid {
+    NSArray *userValue = [db jq_lookupTable:@"predictedValue" dicOrModel:[Predicted class] whereFormat:nil];
+    Predicted *p = userValue[0];
+    double pefStandard = p.pef;
+    double fvcStandard = p.fvc;
+    
+    float a[61], b[61], c[61];
+    
+    float max = -1;
+    float maxTime = -1;
+    int j = 0;
+    for (int i = 0; i < 61; i++) {
+        float f = [self.tableData[i] floatValue];
+        if (f > 0) {
+            j = i;
+        }
+        a[i] = f;
+        b[i] = 0.1;
+        if (f > max) {
+            max = f;
+            maxTime = i*0.1/60;
+        }
+        [tableTime addObject:@((float)i*0.1/60)];
+    }
+    //trapzoidal integral
+    vDSP_vtrapz(a, 1, b, c, 1, 61);
+    double PEF = (double) max;
+    
+    if (maxTime > 0.3) {
+        [self.timeLeftLabel setHidden:YES];
+        [self.time setHidden:YES];
+        [self.spirometry setEnabled:YES];
+        [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+        [self.spirometry setHidden:NO];
+        [self.blowMessage setText:@"Blow out faster!"];
+        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
+        return false;
+    } else if (c[j]-c[j-5] > 0.1 && j < 20) {
+        [self.timeLeftLabel setHidden:YES];
+        [self.time setHidden:YES];
+        [self.spirometry setEnabled:YES];
+        [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+        [self.spirometry setHidden:NO];
+        [self.blowMessage setText:@"Blow out longer!"];
+        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
+        return false;
+    } else if (pefStandard - PEF > 60) {
+        [self.timeLeftLabel setHidden:YES];
+        [self.time setHidden:YES];
+        [self.spirometry setEnabled:YES];
+        [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+        [self.spirometry setHidden:NO];
+        [self.blowMessage setText:@"Blast out harder!"];
+        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
+        return false;
+    } else if (fvcStandard - c[60] > 0.15) {
+        [self.timeLeftLabel setHidden:YES];
+        [self.time setHidden:YES];
+        [self.spirometry setEnabled:YES];
+        [self.spirometry setTitle:@"TRY AGAIN" forState:UIControlStateNormal];
+        [self.spirometry setHidden:NO];
+        [self.blowMessage setText:@"Deeper breath!"];
+        [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
+        return false;
+    }
+    
+    NSDate *now = [NSDate date];
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: now];
+    NSDate *new = [NSDate dateWithTimeInterval: seconds sinceDate: now];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    df.dateFormat = @"yyyy/MM/dd";
+    NSString *dateS = [df stringFromDate:new];
+    
+    
+    Spirometry *s = [[Spirometry alloc]init];
+    s.values =  [[NSMutableArray alloc] initWithArray:tableData copyItems:YES];
+    s.times = [[NSMutableArray alloc] initWithArray:tableTime copyItems:YES];
+    s.date = dateS;
+    s.FEV1 = (double) c[10];
+    s.FVC = (double) c[60];
+    s.PEF = PEF;
+    
+    [db jq_insertTable:@"spirometryTable" dicOrModel:s];
+    NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
+    Spirometry *last = [spiroArr lastObject];
+    return true;
+    
+}
+
+
 
 
 @end

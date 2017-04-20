@@ -105,7 +105,11 @@
         if ([tableData count] == 0) {
             [tableData addObject:@(0)];
         }
-        [tableData addObject:@(v*3)];
+        if (isSpirometry) {
+            [tableData addObject:@(v)];
+        } else {
+            [tableData addObject:@(v*3)];
+        }
     }
     
     if ([tableData count] >= threshold) {

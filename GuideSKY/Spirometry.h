@@ -11,7 +11,8 @@
 @interface Spirometry : NSObject
 
 @property (nonatomic, strong)NSMutableArray *values;
-@property (nonatomic, strong)NSDate *date;
+@property (nonatomic, strong)NSMutableArray *times;
+@property (nonatomic, strong)NSString *date;
 @property (nonatomic, assign)double FEV1;
 @property (nonatomic, assign)double FVC;
 @property (nonatomic, assign)double PEF;

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #include "LoginViewController.h"
 #include "LineViewController.h"
+#include "JQFMDB.h"
+#include "Spirometry.h"
 
 @protocol tabBarViewDeleage
     @optional
