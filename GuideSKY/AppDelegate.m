@@ -28,6 +28,7 @@
     [self.window makeKeyAndVisible];
     _bleShield = [[BLE alloc] init];
     [_bleShield controlSetup];
+    
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"Guide"]!=YES)
     {
         JQFMDB *db = [JQFMDB shareDatabase:@"All"];
@@ -46,7 +47,7 @@
         UIViewController  *vc =[[UIStoryboard storyboardWithName:@"MianTabr" bundle:nil] instantiateViewControllerWithIdentifier:@
                                 "MianTabr"];
         self.window.rootViewController = vc;
-        //[[NSUserDefaults standardUserDefaults]removeObjectForKey:@"Guide"];
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"Guide"];
     }
     return YES;
 }

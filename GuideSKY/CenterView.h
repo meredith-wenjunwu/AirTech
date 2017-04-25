@@ -12,6 +12,7 @@
 #import "Spirometry.h"
 #import "JQFMDB.h"
 #import "Predicted.h"
+#import "MianTabrViewController.h"
 
 
 @interface CenterView : UIView
@@ -27,5 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *gasAnalysis;
 @property (weak, nonatomic) IBOutlet UIButton *spirometry;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *realSpirometry;
 
 @end

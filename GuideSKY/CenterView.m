@@ -16,6 +16,7 @@
     int currSeconds;
     BOOL canStart;
     BOOL isSpirometry;
+    BOOL isSimulation;
     int threshold;
     JQFMDB *db;
 }
@@ -27,6 +28,7 @@ AppDelegate *appdelegate;
 @synthesize tableData;
 @synthesize spirometry;
 @synthesize tableTime;
+@synthesize realSpirometry;
 
 
 - (IBAction)Cancelonclick:(id)sender {
@@ -37,6 +39,7 @@ AppDelegate *appdelegate;
     if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
         [bleShield write:d];
     }
+    
     [tableData removeAllObjects];
     [tableTime removeAllObjects];
     [self removeFromSuperview];
@@ -44,23 +47,40 @@ AppDelegate *appdelegate;
 
 
 - (IBAction)connectBluetooth:(id)sender {
+    [self.realSpirometry setHidden:YES];
+    [self.realSpirometry setEnabled:YES];
+    if (bleShield.activePeripheral.state != CBPeripheralStateConnected) {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Bluetooth"];
+    }
     [tableData removeAllObjects];
     [tableTime removeAllObjects];
-    if ([sender tag] == 1) {
+    if ([sender tag] == 3) {
         isSpirometry = YES;
-        threshold = 61;
+        isSimulation = NO;
+        threshold = 18;
         [self.spirometry setTitle:@"Spirometry" forState:UIControlStateNormal];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Spiro"];
         [self.blowMessage setText:@"Now, Blow into the Spirometer with Full Effort!"];
         [self.blowMessage setFont:[UIFont italicSystemFontOfSize:25]];
-    } else {
+    } else if ([sender tag]== 2) {
         isSpirometry = NO;
-        threshold = 31;
+        isSimulation = NO;
+        threshold = 51;
         [self.gasAnalysis setTitle:@"Gas Analysis" forState:UIControlStateNormal];
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Spiro"];
         [self.blowMessage setText:@"Now, Blow into the Gas Analyzer normally!"];
         [self.blowMessage setFont:[UIFont italicSystemFontOfSize:25]];
+    } else {
+        isSpirometry = YES;
+        isSimulation = YES;
+        threshold = 18;
+        [self.spirometry setTitle:@"Spirometry" forState:UIControlStateNormal];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Spiro"];
+        [self.blowMessage setText:@"Now, Blow into the Spirometer with Full Effort!"];
+        [self.blowMessage setFont:[UIFont italicSystemFontOfSize:25]];
     }
+    [self.realSpirometry setHidden:YES];
     
     //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Bluetooth"]!=YES) {
@@ -82,16 +102,26 @@ AppDelegate *appdelegate;
         }
         NSString *s;
         
-        if (isSpirometry ) {
-            s = @"1";
-        } else {
+        if (isSpirometry && isSimulation) {
+            [self getdata];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Bluetooth"];
+        } else if (!isSimulation){
             s = @"2";
-        }
-        NSData *d;
+            NSData *d;
         
-        d = [s dataUsingEncoding:NSUTF8StringEncoding];
-        if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
-            [bleShield write:d];
+            d = [s dataUsingEncoding:NSUTF8StringEncoding];
+            if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+                [bleShield write:d];
+            }
+        }else{
+            s = @"1";
+            NSData *d;
+            
+            d = [s dataUsingEncoding:NSUTF8StringEncoding];
+            if (bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+                [bleShield write:d];
+            }
+
         }
         canStart = true;
         if ([tableData count] == 0) {
@@ -148,6 +178,7 @@ AppDelegate *appdelegate;
                 [self.activityIndicator stopAnimating];
                 [self.blowMessage setText:@"Data not received!"];
                 canStart = false;
+                [self.realSpirometry setHidden:NO];
                 
                 if (isSpirometry) {
                     [self.spirometry setEnabled:YES];
@@ -168,16 +199,17 @@ AppDelegate *appdelegate;
         
     }
     
-    
 }
 
 -(void)startup {
     currMinute=0;
     
-    if (isSpirometry) {
+    if (isSpirometry && !isSimulation) {
         currSeconds=6;
+    } else if (isSpirometry && isSpirometry) {
+        currSeconds = 10;
     } else {
-        currSeconds = 15;
+        currSeconds = 25;
     }
     timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
 }
@@ -195,7 +227,7 @@ AppDelegate *appdelegate;
         {
             currSeconds-=1;
         }
-        if(currMinute>-1)
+        if(currMinute>-1 && currSeconds <= 6)
             if (isSpirometry)
                 [self.time setText:[NSString stringWithFormat:@"%i",currSeconds]];
     }
@@ -205,13 +237,19 @@ AppDelegate *appdelegate;
         while ([tableData count] < threshold) {
             [tableData addObject:@(0)];
         }
-        if ([self isvalid]) {
+        if (isSpirometry) {
+            if ([self isvalid]) {
+                [self removeFromSuperview];
+                [self.delegate buttonPressed:isSpirometry];
+            }
+        } else {
             [self removeFromSuperview];
             [self.delegate buttonPressed:isSpirometry];
         }
+    
     }
 }
-
+    
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -237,31 +275,34 @@ AppDelegate *appdelegate;
 }
 
 - (BOOL) isvalid {
+    tableTime = [[NSMutableArray alloc] init];
+    [_activityIndicator stopAnimating];
+    [_activityIndicator setHidden:YES];
     NSArray *userValue = [db jq_lookupTable:@"predictedValue" dicOrModel:[Predicted class] whereFormat:nil];
     Predicted *p = userValue[0];
     double pefStandard = p.pef;
     double fvcStandard = p.fvc;
     
-    float a[61], b[61], c[61];
+    float a[18], b[18], c[18];
     
     float max = -1;
     float maxTime = -1;
     int j = 0;
-    for (int i = 0; i < 61; i++) {
+    for (int i = 0; i < 18; i++) {
         float f = [self.tableData[i] floatValue];
-        if (f > 0) {
+        if (f > 0.1) {
             j = i;
         }
         a[i] = f;
-        b[i] = 0.1;
+        b[i] = 0.005556;
         if (f > max) {
             max = f;
-            maxTime = i*0.1/60;
+            maxTime = i/180;
         }
-        [tableTime addObject:@((float)i*0.1/60)];
+        [tableTime addObject:@((float)i*1/180)];
     }
     //trapzoidal integral
-    vDSP_vtrapz(a, 1, b, c, 1, 61);
+    vDSP_vtrapz(a, 1, b, c, 1, 18);
     double PEF = (double) max;
     
     if (maxTime > 0.3) {
@@ -273,7 +314,7 @@ AppDelegate *appdelegate;
         [self.blowMessage setText:@"Blow out faster!"];
         [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
         return false;
-    } else if (c[j]-c[j-5] > 0.1 && j < 20) {
+    } else if (c[j]-c[j-5] > 0.1 && j < 10) {
         [self.timeLeftLabel setHidden:YES];
         [self.time setHidden:YES];
         [self.spirometry setEnabled:YES];
@@ -291,7 +332,7 @@ AppDelegate *appdelegate;
         [self.blowMessage setText:@"Blast out harder!"];
         [self.blowMessage setFont:[UIFont boldSystemFontOfSize:20]];
         return false;
-    } else if (fvcStandard - c[60] > 0.15) {
+    } else if (fvcStandard - c[17] > 0.15) {
         [self.timeLeftLabel setHidden:YES];
         [self.time setHidden:YES];
         [self.spirometry setEnabled:YES];
@@ -312,19 +353,39 @@ AppDelegate *appdelegate;
     
     
     Spirometry *s = [[Spirometry alloc]init];
-    s.values =  [[NSMutableArray alloc] initWithArray:tableData copyItems:YES];
-    s.times = [[NSMutableArray alloc] initWithArray:tableTime copyItems:YES];
+//    s.values =  [[NSArray alloc] initWithArray:tableData copyItems:YES];
+    s.times = [[NSArray alloc] initWithArray:tableTime copyItems:YES];
     s.date = dateS;
-    s.FEV1 = (double) c[10];
-    s.FVC = (double) c[60];
+    s.FEV1 = (double) c[3];
+    s.FVC = (double) c[17];
     s.PEF = PEF;
     
     [db jq_insertTable:@"spirometryTable" dicOrModel:s];
-    NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
-    Spirometry *last = [spiroArr lastObject];
+//    NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
+//    Spirometry *last = [spiroArr lastObject];
     return true;
     
 }
+
+- (void) getdata {
+    
+    float s[18] = {0.05, 54.2, 443.6, 142.4, 73.3, 42.1, 24.5, 19.9, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07, 0.02};
+////  float s[18] = {0.05, 54.2, 233.6, 122.4, 90.6, 83.8, 73.8, 50.2, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07};
+//    float s[18] = {0.05, 54.2, 383.6, 102.4, 63.3, 42.1, 24.5, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01};
+    float num = s[0];
+    [tableData addObject:@(num)];
+    for (int i = 1; i < 18; i++) {
+        num = s[i];
+        float j = (arc4random_uniform(150)) / 10.0 / i - 7.0/i;
+        if (j + num < 0) {
+            [tableData addObject:@(num)];
+        } else {
+            [tableData addObject:@((float)j + num)];
+        }
+    }
+    
+}
+
 
 
 

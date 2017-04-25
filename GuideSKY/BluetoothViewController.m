@@ -41,6 +41,8 @@
     [self.btnDisconnect setEnabled: NO];
     [self.btnDisconnect setHidden:YES];
     tableData = [Global array];
+
+    
 }
 
 -(void) connectionTimer:(NSTimer *)timer
@@ -94,9 +96,20 @@
     double v = [s doubleValue];
     isSpirometry  = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
     if (isSpirometry) {
-        threshold = 61;
+        threshold = 18;
     } else {
-        threshold = 31;
+        threshold = 51;
+    }
+    
+    if ([tableData count] >= threshold) {
+        write = false;
+        NSString *s = @"0";
+        NSData *d;
+        d = [s dataUsingEncoding:NSUTF8StringEncoding];
+        if (_bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+            [_bleShield write:d];
+        }
+        
     }
     
     if ((v > 0 || write) && [tableData count] < threshold) {
@@ -108,20 +121,11 @@
         if (isSpirometry) {
             [tableData addObject:@(v)];
         } else {
-            [tableData addObject:@(v*3)];
+            [tableData addObject:@(v)];
         }
     }
     
-    if ([tableData count] >= threshold) {
-        write = false;
-        NSString *s = @"0";
-        NSData *d;
-        d = [s dataUsingEncoding:NSUTF8StringEncoding];
-        if (_bleShield.activePeripheral.state == CBPeripheralStateConnected) {
-            [_bleShield write:d];
-        }
-
-    }
+    
 
 }
 
@@ -151,6 +155,13 @@ NSTimer *rssiTimer;
 
 -(void) bleDidConnect
 {
+    NSString *s = @"0";
+    NSData *d;
+    d = [s dataUsingEncoding:NSUTF8StringEncoding];
+    if (_bleShield.activePeripheral.state == CBPeripheralStateConnected) {
+        [_bleShield write:d];
+    }
+    
     [tableData removeAllObjects];
     [_activityIndicator setHidden:YES];
     [_activityIndicator stopAnimating];
@@ -175,5 +186,7 @@ NSTimer *rssiTimer;
 //    float i1 = (float)(arc4random_uniform(50000))/100 ;
 //    return i1;
 //}
+
+
 
 @end

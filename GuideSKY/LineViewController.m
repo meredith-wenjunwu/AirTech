@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    tableData = [Global array];
     isSpirometry = [[NSUserDefaults standardUserDefaults] boolForKey:@"Spiro"];
     //isSpirometry = YES;
     // Do any additional setup after loading the view, typically from a nib.
@@ -93,7 +94,7 @@
     self.lineGraph.lineDashPatternForReferenceYAxisLines = @[@(2),@(2)];
     
     // Show the y axis values with this format string
-    self.lineGraph.formatStringForValues = @"%.1f";
+    self.lineGraph.formatStringForValues = @"%.2f";
     
     self.lineGraph.enableBezierCurve = YES;
     // The labels to report the values of the graph when the user touches it
@@ -104,52 +105,12 @@
 #pragma mark - generate data for spirometry
 
 - (void)spirometryDatasets {
-
-    // Reset the arrays of values (Y-Axis points) and dates (X-Axis points / labels)
-//    if (!self.arrayOfValues) self.arrayOfValues = [[NSMutableArray alloc] init];
-//    if (!self.arrayOfDates) self.arrayOfDates = [[NSMutableArray alloc] init];
-//    [self.arrayOfDates removeAllObjects];
-    
-    //    totalNumber = 0;
-    //    NSDate *baseDate = [NSDate date];
-    //    BOOL showNullValue = true;
-    // Add objects to the array based on the stepper value
-    
-//    
-//    float a[61], b[61], c[61];
-//    
-//    float max = -1;
-//    for (int i = 0; i < 61; i++) {
-//        float f = [self.arrayOfValues[i] floatValue];
-//        a[i] = f;
-//        b[i] = 0.1;
-//        if (f > max) {
-//            max = f;
-//        }
-//        
-//        [self.arrayOfDates addObject:@(i*0.1)];
-//        
-//    }
-//    //trapzoidal integral
-//    vDSP_vtrapz(a, 1, b, c, 1, 61);
-//    
-//    //need to comment out later
-//    //[db jq_deleteAllDataFromTable:@"spirometryTable"];
-//    
-//    double PEF = (double) max;
-//    
-//    NSDate *now = [NSDate date];
-//    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
-//    NSInteger seconds = [tz secondsFromGMTForDate: now];
-//    NSDate *new = [NSDate dateWithTimeInterval: seconds sinceDate: now];
-//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-//    df.dateFormat = @"yyyy/MM/dd";
-//    NSString *dateS = [df stringFromDate:new];
-    
     NSArray *spiroArr = [db jq_lookupTable:@"spirometryTable" dicOrModel:[Spirometry class] whereFormat:nil];
     Spirometry *spirometry = [spiroArr lastObject];
-    self.arrayOfValues = spirometry.values;
-    self.arrayOfDates = spirometry.times;
+    self.arrayOfValues = tableData;
+    for (int i = 0; i < 18; i++) {
+        [self.arrayOfDates addObject:@(i/3)];
+    }
     [self.fvcText setText:[NSString stringWithFormat:@"%0.2f", spirometry.FVC]];
     [self.fev1Text setText:[NSString stringWithFormat:@"%0.2f", spirometry.FEV1]];
     [self.fevfvcText setText:[NSString stringWithFormat:@"%0.2f", (spirometry.FVC/spirometry.FEV1)]];
@@ -169,7 +130,7 @@
     [self.arrayOfDates removeAllObjects];
     
     float max = -1;
-    for (int i = 0; i < 31; i++) {
+    for (int i = 0; i < 51; i++) {
         float f = [self.arrayOfValues[i] floatValue];
         if (f > max) {
             max = f;
@@ -228,9 +189,9 @@
 
 - (NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph {
     if (isSpirometry)
-        return 10;
+        return 3;
     else
-        return 2;
+        return 5;
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
@@ -261,7 +222,7 @@
  } */
 
 - (NSString *)popUpSuffixForlineGraph:(BEMSimpleLineGraphView *)graph {
-    return @" (L/s)";
+    return @" (L/min)";
 }
 
 

@@ -79,36 +79,51 @@
         [_gasPredicted setText:[NSString stringWithFormat:@"%0.2f %%", 100*glast.max/3.8]];
     }
     if ([spiroArr count] == 0) {
-        UIAlertController * alert = [UIAlertController
-                                     alertControllerWithTitle:@"No Data"
-                                     message:@"How about taking a Spirometry test now?"
-                                     preferredStyle:UIAlertControllerStyleAlert];
+        [_fvc setText:@"No Data"];
+        [_fev1 setText:@"No Data"];
+        [_pef setText:@"No Data"];
+        [_fev1fvc setText:@"No Data"];
+        
+        [_fev1Predicted setText:@"No Data"];
+        [_fev1fvcPredicted setText:@"No Data"];
+        [_fvcPredicted setText:@"No Data"];
+        [_fev1Predicted setText:@"No Data"];
+        [_pefPredicted setText:@"No Data"];
         
         
-        UIAlertAction* yesButton = [UIAlertAction
-                                    actionWithTitle:@"OK"
-                                    style:UIAlertActionStyleDefault
-                                    handler:^(UIAlertAction * action) {
-                                        //Handle your yes please button action here
-                                    }];
-        [alert addAction:yesButton];
-        [self presentViewController:alert animated:YES completion:nil];
-        return;
-    } else if ([gasArr count] ==0) {
-        UIAlertController * alert = [UIAlertController
-                                     alertControllerWithTitle:@"No Data"
-                                     message:@"How about taking a exhaled Carbon Dioxide test now?"
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        
-        
-        UIAlertAction* yesButton = [UIAlertAction
-                                    actionWithTitle:@"OK"
-                                    style:UIAlertActionStyleDefault
-                                    handler:^(UIAlertAction * action) {
-                                        //Handle your yes please button action here
-                                    }];
-        [alert addAction:yesButton];
-        [self presentViewController:alert animated:YES completion:nil];
+//        UIAlertController * alert = [UIAlertController
+//                                     alertControllerWithTitle:@"No Data"
+//                                     message:@"How about taking a Spirometry test now?"
+//                                     preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        
+//        UIAlertAction* yesButton = [UIAlertAction
+//                                    actionWithTitle:@"OK"
+//                                    style:UIAlertActionStyleDefault
+//                                    handler:^(UIAlertAction * action) {
+//                                        //Handle your yes please button action here
+//                                    }];
+//        [alert addAction:yesButton];
+//        [self presentViewController:alert animated:YES completion:nil];
+        if ([gasArr count] ==0) {
+            [_gas setText:@"No Data"];
+            [_gasPredicted setText:@"No Data"];
+//        UIAlertController * alert = [UIAlertController
+//                                     alertControllerWithTitle:@"No Data"
+//                                     message:@"How about taking a exhaled Carbon Dioxide test now?"
+//                                     preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        
+//        UIAlertAction* yesButton = [UIAlertAction
+//                                    actionWithTitle:@"OK"
+//                                    style:UIAlertActionStyleDefault
+//                                    handler:^(UIAlertAction * action) {
+//                                        //Handle your yes please button action here
+//                                    }];
+//        [alert addAction:yesButton];
+//        [self presentViewController:alert animated:YES completion:nil];
+            return;
+        }
         return;
     }
 }

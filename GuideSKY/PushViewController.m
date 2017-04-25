@@ -107,7 +107,7 @@
     self.lineGraph.lineDashPatternForReferenceYAxisLines = @[@(2),@(2)];
     
     // Show the y axis values with this format string
-    self.lineGraph.formatStringForValues = @"%.1f";
+    self.lineGraph.formatStringForValues = @"%.2f";
     
 
 }
@@ -131,8 +131,8 @@
         }
     } else {
         UIAlertController * alert = [UIAlertController
-                                     alertControllerWithTitle:@"Ooooops"
-                                     message:@"No data or only 1 data available! Why not take some test?"
+                                     alertControllerWithTitle:@"Not Enough Data to plot"
+                                     message:@"Why not take some test first?"
                                      preferredStyle:UIAlertControllerStyleAlert];
         
         
@@ -241,6 +241,7 @@
     }
     if ([testType selectedSegmentIndex] == 0) {
         if (graphObjectIncrement.value > spiroLength) {
+            [graphObjectIncrement setValue:graphObjectIncrement.value - 1];
             UIAlertController * alert = [UIAlertController
                                          alertControllerWithTitle:@"Ooooops"
                                          message:@"No more data to display"
@@ -259,6 +260,7 @@
         }
     } else {
         if (graphObjectIncrement.value > gasLength) {
+            [graphObjectIncrement setValue:graphObjectIncrement.value - 1];
             UIAlertController * alert = [UIAlertController
                                          alertControllerWithTitle:@"Ooooops"
                                          message:@"No more data to display"
