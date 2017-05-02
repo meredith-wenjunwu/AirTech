@@ -29,5 +29,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *spirometry;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *realSpirometry;
+- (IBAction)longer:(id)sender;
+- (IBAction)harder:(id)sender;
+- (IBAction)faster:(id)sender;
 
 @end

@@ -19,6 +19,7 @@
     BOOL isSimulation;
     int threshold;
     JQFMDB *db;
+    int test;
 }
 @end
 
@@ -253,6 +254,7 @@ AppDelegate *appdelegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
+    test = 0;
     if (self = [super initWithFrame:frame]) {
         
         self = [[[NSBundle mainBundle] loadNibNamed:@"CenterView" owner:self options:nil] lastObject];
@@ -297,7 +299,7 @@ AppDelegate *appdelegate;
         b[i] = 0.005556;
         if (f > max) {
             max = f;
-            maxTime = i/180;
+            maxTime = i;
         }
         [tableTime addObject:@((float)i*1/180)];
     }
@@ -305,7 +307,7 @@ AppDelegate *appdelegate;
     vDSP_vtrapz(a, 1, b, c, 1, 18);
     double PEF = (double) max;
     
-    if (maxTime > 0.3) {
+    if (maxTime > 3) {
         [self.timeLeftLabel setHidden:YES];
         [self.time setHidden:YES];
         [self.spirometry setEnabled:YES];
@@ -369,20 +371,73 @@ AppDelegate *appdelegate;
 
 - (void) getdata {
     
-    float s[18] = {0.05, 54.2, 443.6, 142.4, 73.3, 42.1, 24.5, 19.9, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07, 0.02};
-////  float s[18] = {0.05, 54.2, 233.6, 122.4, 90.6, 83.8, 73.8, 50.2, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07};
-//    float s[18] = {0.05, 54.2, 383.6, 102.4, 63.3, 42.1, 24.5, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01};
-    float num = s[0];
-    [tableData addObject:@(num)];
-    for (int i = 1; i < 18; i++) {
-        num = s[i];
-        float j = (arc4random_uniform(150)) / 10.0 / i - 7.0/i;
-        if (j + num < 0) {
-            [tableData addObject:@(num)];
-        } else {
-            [tableData addObject:@((float)j + num)];
+    if (test == 0) {
+        float s[18] = {0.05, 54.2, 443.6, 142.4, 73.3, 42.1, 24.5, 19.9, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07, 0.02};
+        float num = s[0];
+        [tableData addObject:@(num)];
+        for (int i = 1; i < 18; i++) {
+            num = s[i];
+            float j = (arc4random_uniform(150)) / 10.0 / i - 7.0/i;
+            if (j + num < 0) {
+                [tableData addObject:@(num)];
+            } else {
+                [tableData addObject:@((float)j + num)];
+            }
         }
+    } else if (test == 1){
+        float s2[18] = {0.05, 54.2, 383.6, 102.4, 63.3, 42.1, 24.5, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01};
+        float num = s2[0];
+        [tableData addObject:@(num)];
+        for (int i = 1; i < 18; i++) {
+            num = s2[i];
+            float j = 0.002;
+            if (j + num < 0) {
+                [tableData addObject:@(num)];
+            } else {
+                [tableData addObject:@((float)j + num)];
+            }
+        }
+
+    } else if(test == 2) {
+        float s3[18] = {0.05, 54.2, 233.6, 122.4, 90.6, 83.8, 73.8, 50.2, 14.2, 7.4, 5.1, 3.2, 2.8, 1.4, 0.5, 0.01, 0.07};
+        float num = s3[0];
+        [tableData addObject:@(num)];
+        for (int i = 1; i < 18; i++) {
+            num = s3[i];
+            float j = 0.002;
+            if (j + num < 0) {
+                [tableData addObject:@(num)];
+            } else {
+                [tableData addObject:@((float)j + num)];
+            }
+        }
+    } else if (test == 3) {
+        float s4[18] = {0.05, 54.2, 113.6, 202.4, 363.3, 372.1, 424.5, 510.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01};
+        float num = s4[0];
+        [tableData addObject:@(num)];
+        for (int i = 1; i < 18; i++) {
+            num = s4[i];
+            float j = 0.002;
+            if (j + num < 0) {
+                [tableData addObject:@(num)];
+            } else {
+                [tableData addObject:@((float)j + num)];
+            }
+        }
+        
     }
+//    float s[18] = {0.05, 54.2, 383.6, 102.4, 63.3, 42.1, 24.5, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01};
+//    float num = s[0];
+//    [tableData addObject:@(num)];
+//    for (int i = 1; i < 18; i++) {
+//        num = s[i];
+//        float j = (arc4random_uniform(150)) / 10.0 / i - 7.0/i;
+//        if (j + num < 0) {
+//            [tableData addObject:@(num)];
+//        } else {
+//            [tableData addObject:@((float)j + num)];
+//        }
+//    }
     
 }
 
@@ -390,4 +445,15 @@ AppDelegate *appdelegate;
 
 
 
+- (IBAction)longer:(id)sender {
+    test = 1;
+}
+
+- (IBAction)harder:(id)sender {
+    test = 2;
+}
+
+- (IBAction)faster:(id)sender {
+    test = 3;
+}
 @end
